@@ -1,0 +1,37 @@
+// schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Retailer {
+  id       String   @id @default(uuid()) @map("_id")
+  name     String
+  email    String   @unique
+  password String
+  products Product[]
+}
+
+model Product {
+  id          String   @id @default(uuid()) @map("_id")
+  name        String
+  price       Float
+  availability Boolean
+  retailerId  String
+  retailer    Retailer @relation(fields: [retailerId], references: [id])
+  orders      Order[]
+}
+
+model Order {
+  id          String   @id @default(uuid()) @map("_id")
+  productId   String
+  consumerName String
+  phone       String
+  address     String
+  status      String   @default("Pending")
+  product     Product  @relation(fields: [productId], references: [id])
+}
