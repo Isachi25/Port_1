@@ -1,0 +1,71 @@
+2024-10-16T13:02:27.530Z info: Fetched 0 orders
+2024-10-16T13:05:38.288Z info: Order created: cadc654e-164b-4660-a0f9-390cc97f37a5
+2024-10-16T13:05:38.292Z info: Order created: cadc654e-164b-4660-a0f9-390cc97f37a5
+2024-10-16T13:07:13.355Z error: Error fetching order: Order not found
+2024-10-16T13:07:13.356Z error: Error fetching order: Error fetching order
+2024-10-16T13:09:55.532Z error: Error fetching order: Order not found
+2024-10-16T13:09:55.539Z error: Error fetching order: Error fetching order
+2024-10-16T13:12:40.965Z error: Error fetching order: Order not found
+2024-10-16T13:12:40.968Z error: Error fetching order: Error fetching order
+2024-10-16T13:13:05.796Z error: Error fetching order: 
+Invalid `prisma.order.findUnique()` invocation in
+/home/nicanorkyamba/Port_1/src/services/orderService.js:56:38
+
+  53 // Function to get order by ID
+  54 async function getOrderById(id) {
+  55   try {
+→ 56     const order = await prisma.order.findUnique(
+Inconsistent query result: Field product is required to return data, got `null` instead.
+2024-10-16T13:13:05.797Z error: Error fetching order: Error fetching order
+2024-10-16T13:13:41.821Z error: Error fetching order: 
+Invalid `prisma.order.findUnique()` invocation in
+/home/nicanorkyamba/Port_1/src/services/orderService.js:56:38
+
+  53 // Function to get order by ID
+  54 async function getOrderById(id) {
+  55   try {
+→ 56     const order = await prisma.order.findUnique(
+Inconsistent query result: Field product is required to return data, got `null` instead.
+2024-10-16T13:13:41.829Z error: Error fetching order: Error fetching order
+2024-10-16T13:15:47.550Z error: Error fetching order: 
+Invalid `prisma.order.findUnique()` invocation in
+/home/nicanorkyamba/Port_1/src/services/orderService.js:56:38
+
+  53 // Function to get order by ID
+  54 async function getOrderById(id) {
+  55   try {
+→ 56     const order = await prisma.order.findUnique(
+Inconsistent query result: Field product is required to return data, got `null` instead.
+2024-10-16T13:15:47.557Z error: Error fetching order: Error fetching order
+2024-10-16T13:20:31.588Z error: Error fetching order: 
+Invalid `prisma.order.findUnique()` invocation in
+/home/nicanorkyamba/Port_1/src/services/orderService.js:56:38
+
+  53 // Function to get order by ID
+  54 async function getOrderById(id) {
+  55   try {
+→ 56     const order = await prisma.order.findUnique(
+Inconsistent query result: Field product is required to return data, got `null` instead.
+2024-10-16T13:20:31.597Z error: Error fetching order: Error fetching order
+2024-10-16T13:22:25.271Z info: Product created: 9edb7fba-f090-455e-8940-390aa06921d3
+2024-10-16T13:22:25.271Z info: Product created: 9edb7fba-f090-455e-8940-390aa06921d3
+2024-10-16T13:23:01.079Z info: Fetched 0 products
+2024-10-16T13:23:01.083Z info: Fetched 0 products
+2024-10-16T13:23:32.842Z info: Fetched 0 products
+2024-10-16T13:23:32.843Z info: Fetched 0 products
+2024-10-16T13:25:02.319Z info: Fetched 0 products
+2024-10-16T13:25:02.330Z info: Fetched 0 products
+2024-10-16T13:26:08.487Z info: Fetched 0 products
+2024-10-16T13:26:08.494Z info: Fetched 0 products
+2024-10-16T13:27:25.236Z info: Fetched 1 products
+2024-10-16T13:27:25.257Z info: Fetched 1 products
+2024-10-16T13:30:32.619Z info: Fetched 1 products
+2024-10-16T13:30:32.651Z info: Fetched 1 products
+2024-10-16T13:31:47.238Z info: Fetched product: 9edb7fba-f090-455e-8940-390aa06921d3
+2024-10-16T13:31:47.238Z info: Fetched product: 9edb7fba-f090-455e-8940-390aa06921d3
+2024-10-16T13:33:37.824Z info: Product updated: 9edb7fba-f090-455e-8940-390aa06921d3
+2024-10-16T13:33:37.825Z info: Product updated: 9edb7fba-f090-455e-8940-390aa06921d3
+2024-10-16T13:34:54.818Z info: Product deleted: 9edb7fba-f090-455e-8940-390aa06921d3
+2024-10-16T13:34:54.819Z info: Product deleted: 9edb7fba-f090-455e-8940-390aa06921d3
+2024-10-16T13:40:47.134Z info: Product permanently deleted: 9edb7fba-f090-455e-8940-390aa06921d3
+2024-10-16T13:40:47.145Z info: Product permanently deleted: 9edb7fba-f090-455e-8940-390aa06921d3

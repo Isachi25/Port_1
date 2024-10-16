@@ -1,4 +1,4 @@
-const productService = require('../services/productService');
+const orderService = require('../services/orderService');
 const Joi = require('joi');
 const logger = require('../utils/logger');
 
@@ -9,19 +9,19 @@ const paginationSchema = Joi.object({
   limit: Joi.number().integer().min(1).default(10)
 });
 
-// Function to create a new product
-async function createProduct (req, res) {
+// Function to create a new order
+async function createOrder (req, res) {
   try {
-    const product = await productService.createProduct(req.body);
-    logger.info(`Product created: ${product.id}`);
+    const order = await orderService.createOrder(req.body);
+    logger.info(`Order created: ${order.id}`);
     res.status(201).json({
       statusCode: 201,
-      message: 'Product created successfully',
+      message: 'Order created successfully',
       status: 'success',
-      data: product
+      data: order
     });
   } catch (error) {
-    logger.error(`Error creating product: ${error.message}`);
+    logger.error(`Error creating order: ${error.message}`);
     res.status(400).json({
       statusCode: 400,
       message: 'Bad request',
@@ -31,8 +31,8 @@ async function createProduct (req, res) {
   }
 }
 
-// Function to get all products with pagination
-async function getProducts (req, res) {
+// Function to get all orders with pagination
+async function getOrders (req, res) {
   try {
     const { error, value } = paginationSchema.validate(req.query);
     if (error) {
@@ -44,16 +44,16 @@ async function getProducts (req, res) {
       });
     }
 
-    const products = await productService.getProducts(value.page, value.limit);
-    logger.info(`Fetched ${products.length} products`);
+    const orders = await orderService.getOrders(value.page, value.limit);
+    logger.info(`Fetched ${orders.length} orders`);
     res.status(200).json({
       statusCode: 200,
-      message: 'Products fetched successfully',
+      message: 'Orders fetched successfully',
       status: 'success',
-      data: products
+      data: orders
     });
   } catch (error) {
-    logger.error(`Error fetching products: ${error.message}`);
+    logger.error(`Error fetching orders: ${error.message}`);
     res.status(500).json({
       statusCode: 500,
       message: 'Internal server error',
@@ -63,8 +63,8 @@ async function getProducts (req, res) {
   }
 }
 
-// Function to get product by ID
-async function getProductById (req, res) {
+// Function to get order by ID
+async function getOrderById (req, res) {
   try {
     const { error } = idSchema.validate(req.params.id);
     if (error) {
@@ -76,25 +76,25 @@ async function getProductById (req, res) {
       });
     }
 
-    const product = await productService.getProductById(req.params.id);
-    if (product) {
-      logger.info(`Fetched product: ${product.id}`);
+    const order = await orderService.getOrderById(req.params.id);
+    if (order) {
+      logger.info(`Fetched order: ${order.id}`);
       res.status(200).json({
         statusCode: 200,
-        message: 'Product fetched successfully',
+        message: 'Order fetched successfully',
         status: 'success',
-        data: product
+        data: order
       });
     } else {
       res.status(404).json({
         statusCode: 404,
-        message: 'Product not found',
+        message: 'Order not found',
         status: 'error',
         data: null
       });
     }
   } catch (error) {
-    logger.error(`Error fetching product: ${error.message}`);
+    logger.error(`Error fetching order: ${error.message}`);
     res.status(500).json({
       statusCode: 500,
       message: 'Internal server error',
@@ -104,8 +104,8 @@ async function getProductById (req, res) {
   }
 }
 
-// Function to update product
-async function updateProduct (req, res) {
+// Function to update order
+async function updateOrder (req, res) {
   try {
     const { error } = idSchema.validate(req.params.id);
     if (error) {
@@ -117,24 +117,24 @@ async function updateProduct (req, res) {
       });
     }
 
-    const product = await productService.updateProduct(req.params.id, req.body);
-    logger.info(`Product updated: ${product.id}`);
+    const order = await orderService.updateOrder(req.params.id, req.body);
+    logger.info(`Order updated: ${order.id}`);
     res.status(200).json({
       statusCode: 200,
-      message: 'Product updated successfully',
+      message: 'Order updated successfully',
       status: 'success',
-      data: product
+      data: order
     });
   } catch (error) {
-    if (error.message === 'Product not found') {
+    if (error.message === 'Order not found') {
       res.status(404).json({
         statusCode: 404,
-        message: 'Product not found',
+        message: 'Order not found',
         status: 'error',
-        data: null
+        error: error.message
       });
     } else {
-      logger.error(`Error updating product: ${error.message}`);
+      logger.error(`Error updating order: ${error.message}`);
       res.status(400).json({
         statusCode: 400,
         message: 'Bad request',
@@ -145,8 +145,8 @@ async function updateProduct (req, res) {
   }
 }
 
-// Function to delete product (soft delete)
-async function deleteProduct (req, res) {
+// Function to delete order (soft delete)
+async function deleteOrder (req, res) {
   try {
     const { error } = idSchema.validate(req.params.id);
     if (error) {
@@ -158,24 +158,19 @@ async function deleteProduct (req, res) {
       });
     }
 
-    await productService.deleteProduct(req.params.id);
-    logger.info(`Product deleted: ${req.params.id}`);
-    res.status(200).json({
-      statusCode: 200,
-      message: 'Product deleted successfully',
-      status: 'success',
-      data: null
-    });
+    await orderService.deleteOrder(req.params.id);
+    logger.info(`Order deleted: ${req.params.id}`);
+    res.status(204).end();
   } catch (error) {
-    if (error.message === 'Product not found') {
+    if (error.message === 'Order not found') {
       res.status(404).json({
         statusCode: 404,
-        message: 'Product not found',
+        message: 'Order not found',
         status: 'error',
         data: null
       });
     } else {
-      logger.error(`Error deleting product: ${error.message}`);
+      logger.error(`Error deleting order: ${error.message}`);
       res.status(500).json({
         statusCode: 500,
         message: 'Internal server error',
@@ -186,8 +181,8 @@ async function deleteProduct (req, res) {
   }
 }
 
-// Function to permanently delete product
-async function permanentlyDeleteProduct (req, res) {
+// Function to permanently delete order
+async function permanentlyDeleteOrder (req, res) {
   try {
     const { error } = idSchema.validate(req.params.id);
     if (error) {
@@ -195,28 +190,28 @@ async function permanentlyDeleteProduct (req, res) {
         statusCode: 400,
         message: 'Bad request',
         status: 'error',
-        data: null
+        error: error.message
       });
     }
 
-    await productService.permanentlyDeleteProduct(req.params.id);
-    logger.info(`Product permanently deleted: ${req.params.id}`);
+    await orderService.permanentlyDeleteOrder(req.params.id);
+    logger.info(`Order permanently deleted: ${req.params.id}`);
     res.status(200).json({
       statusCode: 200,
-      message: 'Product permanently deleted successfully',
+      message: 'Order permanently deleted successfully',
       status: 'success',
       data: null
     });
   } catch (error) {
-    if (error.message === 'Product not found') {
+    if (error.message === 'Order not found') {
       res.status(404).json({
         statusCode: 404,
-        message: 'Product not found',
+        message: 'Order not found',
         status: 'error',
         data: null
       });
     } else {
-      logger.error(`Error permanently deleting product: ${error.message}`);
+      logger.error(`Error permanently deleting order: ${error.message}`);
       res.status(500).json({
         statusCode: 500,
         message: 'Internal server error',
@@ -228,10 +223,10 @@ async function permanentlyDeleteProduct (req, res) {
 }
 
 module.exports = {
-  createProduct,
-  getProducts,
-  getProductById,
-  updateProduct,
-  deleteProduct,
-  permanentlyDeleteProduct
+  createOrder,
+  getOrders,
+  getOrderById,
+  updateOrder,
+  deleteOrder,
+  permanentlyDeleteOrder
 };
