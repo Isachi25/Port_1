@@ -164,12 +164,12 @@ async function deleteRetailer(req, res) {
       });
     }
 
-    await retailerService.deleteRetailer(req.params.id);
-    logger.info(`Retailer deleted: ${req.params.id}`);
+    const deletedRetailer = await retailerService.deleteRetailer(req.params.id);
+    logger.info(`Retailer deleted: ${deletedRetailer.id}`);
     res.status(204).json({
       statusCode: 204,
       message: 'Retailer deleted successfully',
-      status:'success',
+      status: 'success',
       data: null
     });
   } catch (error) {
