@@ -19,6 +19,6 @@ router.put('/:id', retailerController.updateRetailer);
 router.delete('/:id', retailerController.deleteRetailer);
 
 // Route to permanently delete a retailer
-router.delete(':id/permanent', retailerController.permanentlyDeleteRetailer);
+router.delete('/:id/permanent', retailerController.permanentlyDeleteRetailer);
 
 module.exports = router;
