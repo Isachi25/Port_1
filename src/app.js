@@ -11,9 +11,11 @@ const orderRoutes = require('./routes/orderRoutes');
 
 const app = express();
 
+// Middleware to parse JSON bodies
+app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
-app.use(morgan('combined')); // Use morgan for logging requests
+app.use(morgan('combined'));
 
 app.get('/', (req, res) => {
   res.send('Welcome to Fresh Produce Platform');
