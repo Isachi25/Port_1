@@ -97,11 +97,20 @@ async function updateRetailer(id, retailer) {
       throw new Error('Retailer not found');
     }
 
+    if (retailer.password) {
+      retailer.password = await hashPassword(retailer.password);
+    }
+
     const updatedRetailer = await prisma.retailer.update({
       where: {
         id: id,
       },
-      data: retailer,
+      data: {
+        name: retailer.name,
+        email: retailer.email,
+        password: retailer.password,
+        profileImage: retailer.profileImage,
+      },
     });
     logger.info(`Retailer updated: ${updatedRetailer.id}`);
     return updatedRetailer;

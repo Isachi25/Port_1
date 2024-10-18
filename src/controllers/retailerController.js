@@ -12,10 +12,6 @@ const paginationSchema = Joi.object({
 // Function to create a new retailer
 async function createRetailer(req, res) {
   try {
-    // Log the request body and file to debug
-    console.log(req.body);
-    console.log(req.file);
-
     // Add the file path to the request body
     req.body.profileImage = req.file.path;
 
@@ -123,6 +119,9 @@ async function updateRetailer(req, res) {
         error: error.message
       });
     }
+
+    // Add the file path to the request body
+    req.body.profileImage = req.file.path;
 
     const retailer = await retailerService.updateRetailer(req.params.id, req.body);
     logger.info(`Retailer updated: ${retailer.id}`);
