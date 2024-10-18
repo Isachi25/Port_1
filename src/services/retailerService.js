@@ -48,9 +48,6 @@ async function getRetailers(page = 1, limit = 10) {
     const retailers = await prisma.retailer.findMany({
       skip: (page - 1) * limit,
       take: limit,
-      where: {
-        deletedAt: null,
-      },
     });
     logger.info(`Fetched ${retailers.length} retailers`);
     return retailers;
