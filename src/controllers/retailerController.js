@@ -166,7 +166,12 @@ async function deleteRetailer(req, res) {
 
     await retailerService.deleteRetailer(req.params.id);
     logger.info(`Retailer deleted: ${req.params.id}`);
-    res.status(204).end();
+    res.status(204).json({
+      statusCode: 204,
+      message: 'Retailer deleted successfully',
+      status:'success',
+      data: null
+    });
   } catch (error) {
     logger.error(`Error deleting retailer: ${error.message}`);
     res.status(500).json({
