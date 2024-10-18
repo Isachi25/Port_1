@@ -20,11 +20,19 @@ async function createRetailer(retailer) {
   }
 
   try {
+    // Extract individual fields
+    const { name, email, password, profileImage } = retailer;
+
     // Hash the password before saving
-    retailer.password = await hashPassword(retailer.password);
+    const hashedPassword = await hashPassword(password);
 
     const newRetailer = await prisma.retailer.create({
-      data: retailer,
+      data: {
+        name,
+        email,
+        password: hashedPassword,
+        profileImage,
+      },
     });
     logger.info(`Retailer created: ${newRetailer.id}`);
     return newRetailer;
