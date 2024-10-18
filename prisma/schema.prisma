@@ -9,6 +9,14 @@ enum OrderStatus {
   Cancelled
 }
 
+enum ProductCategory {
+  Poultry
+  Dairy
+  Serials
+  Vegetables
+  Fruits
+}
+
 datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
@@ -44,6 +52,7 @@ model Product {
   availability      Boolean // in stock or out of stock
   description       String
   image             String
+  category          ProductCategory
   retailerId        String
   retailer          Retailer          @relation(fields: [retailerId], references: [id])
   orders            Order[]

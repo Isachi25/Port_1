@@ -2,6 +2,7 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const Joi = require('joi');
 const logger = require('../utils/logger');
+const nodemailer = require('nodemailer');
 
 // Validation schema
 const orderSchema = Joi.object({
@@ -13,8 +14,34 @@ const orderSchema = Joi.object({
   status: Joi.string().valid('Processing', 'Delivered', 'Cancelled').default('Processing')
 });
 
+// Email transporter setup
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  }
+});
+
+// Function to send email
+async function sendOrderConfirmationEmail(order) {
+  const mailOptions = {
+    from: process.env.EMAIL_USER,
+    to: order.email,
+    subject: 'Order Confirmation',
+    text: `Dear ${order.clientName},\n\nYour order has been received. Here are the details:\n\nProduct ID: ${order.productId}\nAddress: ${order.address}\nStatus: ${order.status}\n\nThank you for shopping with us!\n\nBest regards,\nRetailer`
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    logger.info(`Order confirmation email sent to: ${order.email}`);
+  } catch (err) {
+    logger.error(`Error sending email: ${err.message}`);
+  }
+}
+
 // Function to create a new order
-async function createOrder (order) {
+async function createOrder(order) {
   const { error } = orderSchema.validate(order);
   if (error) {
     throw new Error(`Validation error: ${error.details[0].message}`);
@@ -25,6 +52,10 @@ async function createOrder (order) {
       data: order
     });
     logger.info(`Order created: ${newOrder.id}`);
+
+    // Send order confirmation email
+    await sendOrderConfirmationEmail(newOrder);
+
     return newOrder;
   } catch (err) {
     logger.error(`Error creating order: ${err.message}`);

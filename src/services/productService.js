@@ -10,7 +10,8 @@ const productSchema = Joi.object({
   availability: Joi.boolean().required(),
   description: Joi.string().required(),
   image: Joi.string().required(),
-  retailerId: Joi.string().required()
+  retailerId: Joi.string().required(),
+  category: Joi.string().valid('Poultry', 'Dairy', 'Serials', 'Vegetables', 'Fruits').required()
 });
 
 // Function to create a new product
@@ -44,6 +45,30 @@ async function getProducts (page = 1, limit = 10) {
   } catch (err) {
     logger.error(`Error fetching products: ${err.message}`);
     throw new Error('Error fetching products');
+  }
+}
+
+// Function to get products by category
+async function getProductsByCategory (category, page = 1, limit = 10) {
+  const categorySchema = Joi.string().valid('Poultry', 'Dairy', 'Serials', 'Vegetables', 'Fruits').required();
+  const { error } = categorySchema.validate(category);
+  if (error) {
+    throw new Error(`Validation error: ${error.details[0].message}`);
+  }
+
+  try {
+    const products = await prisma.product.findMany({
+      where: {
+        category
+      },
+      skip: (page - 1) * limit,
+      take: limit
+    });
+    logger.info(`Fetched ${products.length} products in category ${category}`);
+    return products;
+  } catch (err) {
+    logger.error(`Error fetching products by category: ${err.message}`);
+    throw new Error('Error fetching products by category');
   }
 }
 
@@ -158,6 +183,7 @@ async function permanentlyDeleteProduct (id) {
 module.exports = {
   createProduct,
   getProducts,
+  getProductsByCategory,
   getProductById,
   updateProduct,
   deleteProduct,

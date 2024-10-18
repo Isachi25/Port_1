@@ -69,3 +69,9 @@ Inconsistent query result: Field product is required to return data, got `null` 
 2024-10-16T13:34:54.819Z info: Product deleted: 9edb7fba-f090-455e-8940-390aa06921d3
 2024-10-16T13:40:47.134Z info: Product permanently deleted: 9edb7fba-f090-455e-8940-390aa06921d3
 2024-10-16T13:40:47.145Z info: Product permanently deleted: 9edb7fba-f090-455e-8940-390aa06921d3
+2024-10-16T14:33:41.405Z error: Error fetching product: Product not found
+2024-10-16T14:33:41.415Z error: Error fetching product: Error fetching product
+2024-10-16T14:34:19.184Z info: Fetched 0 products
+2024-10-16T14:34:19.185Z info: Fetched 0 products
+2024-10-18T11:56:49.166Z info: Fetched 0 products
+2024-10-18T11:56:49.179Z info: Fetched 0 products

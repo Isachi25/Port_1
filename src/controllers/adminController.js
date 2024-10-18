@@ -1,4 +1,4 @@
-const orderService = require('../services/orderService');
+const adminService = require('../services/adminService');
 const Joi = require('joi');
 const logger = require('../utils/logger');
 
@@ -6,22 +6,22 @@ const logger = require('../utils/logger');
 const idSchema = Joi.string().required();
 const paginationSchema = Joi.object({
   page: Joi.number().integer().min(1).default(1),
-  limit: Joi.number().integer().min(1).default(10)
+  limit: Joi.number().integer().min(1).default(10),
 });
 
-// Function to create a new order
-async function createOrder(req, res) {
+// Function to create a new admin
+async function createAdmin(req, res) {
   try {
-    const order = await orderService.createOrder(req.body);
-    logger.info(`Order created: ${order.id}`);
+    const admin = await adminService.createAdmin(req.body);
+    logger.info(`Admin created: ${admin.id}`);
     res.status(201).json({
       statusCode: 201,
-      message: 'Order created successfully',
+      message: 'Admin created successfully',
       status: 'success',
-      data: order
+      data: admin
     });
   } catch (error) {
-    logger.error(`Error creating order: ${error.message}`);
+    logger.error(`Error creating admin: ${error.message}`);
     res.status(400).json({
       statusCode: 400,
       message: 'Bad request',
@@ -31,8 +31,8 @@ async function createOrder(req, res) {
   }
 }
 
-// Function to get all orders with pagination
-async function getOrders (req, res) {
+// Function to get all admins with pagination
+async function getAdmins(req, res) {
   try {
     const { error, value } = paginationSchema.validate(req.query);
     if (error) {
@@ -44,16 +44,16 @@ async function getOrders (req, res) {
       });
     }
 
-    const orders = await orderService.getOrders(value.page, value.limit);
-    logger.info(`Fetched ${orders.length} orders`);
+    const admins = await adminService.getAdmins(value.page, value.limit);
+    logger.info(`Fetched ${admins.length} admins`);
     res.status(200).json({
       statusCode: 200,
-      message: 'Orders fetched successfully',
+      message: 'Admins fetched successfully',
       status: 'success',
-      data: orders
+      data: admins
     });
   } catch (error) {
-    logger.error(`Error fetching orders: ${error.message}`);
+    logger.error(`Error fetching admins: ${error.message}`);
     res.status(500).json({
       statusCode: 500,
       message: 'Internal server error',
@@ -63,8 +63,8 @@ async function getOrders (req, res) {
   }
 }
 
-// Function to get order by ID
-async function getOrderById (req, res) {
+// Function to get admin by ID
+async function getAdminById(req, res) {
   try {
     const { error } = idSchema.validate(req.params.id);
     if (error) {
@@ -76,25 +76,25 @@ async function getOrderById (req, res) {
       });
     }
 
-    const order = await orderService.getOrderById(req.params.id);
-    if (order) {
-      logger.info(`Fetched order: ${order.id}`);
+    const admin = await adminService.getAdminById(req.params.id);
+    if (admin) {
+      logger.info(`Fetched admin: ${admin.id}`);
       res.status(200).json({
         statusCode: 200,
-        message: 'Order fetched successfully',
+        message: 'Admin fetched successfully',
         status: 'success',
-        data: order
+        data: admin
       });
     } else {
       res.status(404).json({
         statusCode: 404,
-        message: 'Order not found',
+        message: 'Admin not found',
         status: 'error',
         data: null
       });
     }
   } catch (error) {
-    logger.error(`Error fetching order: ${error.message}`);
+    logger.error(`Error fetching admin: ${error.message}`);
     res.status(500).json({
       statusCode: 500,
       message: 'Internal server error',
@@ -104,8 +104,8 @@ async function getOrderById (req, res) {
   }
 }
 
-// Function to update order
-async function updateOrder (req, res) {
+// Function to update admin
+async function updateAdmin(req, res) {
   try {
     const { error } = idSchema.validate(req.params.id);
     if (error) {
@@ -117,24 +117,24 @@ async function updateOrder (req, res) {
       });
     }
 
-    const order = await orderService.updateOrder(req.params.id, req.body);
-    logger.info(`Order updated: ${order.id}`);
+    const admin = await adminService.updateAdmin(req.params.id, req.body);
+    logger.info(`Admin updated: ${admin.id}`);
     res.status(200).json({
       statusCode: 200,
-      message: 'Order updated successfully',
+      message: 'Admin updated successfully',
       status: 'success',
-      data: order
+      data: admin
     });
   } catch (error) {
-    if (error.message === 'Order not found') {
+    if (error.message === 'Admin not found') {
       res.status(404).json({
         statusCode: 404,
-        message: 'Order not found',
+        message: 'Admin not found',
         status: 'error',
         error: error.message
       });
     } else {
-      logger.error(`Error updating order: ${error.message}`);
+      logger.error(`Error updating admin: ${error.message}`);
       res.status(400).json({
         statusCode: 400,
         message: 'Bad request',
@@ -145,8 +145,8 @@ async function updateOrder (req, res) {
   }
 }
 
-// Function to delete order (soft delete)
-async function deleteOrder (req, res) {
+// Function to delete admin (soft delete)
+async function deleteAdmin(req, res) {
   try {
     const { error } = idSchema.validate(req.params.id);
     if (error) {
@@ -158,31 +158,22 @@ async function deleteOrder (req, res) {
       });
     }
 
-    await orderService.deleteOrder(req.params.id);
-    logger.info(`Order deleted: ${req.params.id}`);
+    await adminService.deleteAdmin(req.params.id);
+    logger.info(`Admin deleted: ${req.params.id}`);
     res.status(204).end();
   } catch (error) {
-    if (error.message === 'Order not found') {
-      res.status(404).json({
-        statusCode: 404,
-        message: 'Order not found',
-        status: 'error',
-        data: null
-      });
-    } else {
-      logger.error(`Error deleting order: ${error.message}`);
-      res.status(500).json({
-        statusCode: 500,
-        message: 'Internal server error',
-        status: 'error',
-        error: error.message
-      });
-    }
+    logger.error(`Error deleting admin: ${error.message}`);
+    res.status(500).json({
+      statusCode: 500,
+      message: 'Internal server error',
+      status: 'error',
+      error: error.message
+    });
   }
 }
 
-// Function to permanently delete order
-async function permanentlyDeleteOrder (req, res) {
+// Function to permanently delete admin
+async function permanentlyDeleteAdmin(req, res) {
   try {
     const { error } = idSchema.validate(req.params.id);
     if (error) {
@@ -194,39 +185,30 @@ async function permanentlyDeleteOrder (req, res) {
       });
     }
 
-    await orderService.permanentlyDeleteOrder(req.params.id);
-    logger.info(`Order permanently deleted: ${req.params.id}`);
+    await adminService.permanentlyDeleteAdmin(req.params.id);
+    logger.info(`Admin permanently deleted: ${req.params.id}`);
     res.status(200).json({
       statusCode: 200,
-      message: 'Order permanently deleted successfully',
+      message: 'Admin permanently deleted successfully',
       status: 'success',
       data: null
     });
   } catch (error) {
-    if (error.message === 'Order not found') {
-      res.status(404).json({
-        statusCode: 404,
-        message: 'Order not found',
-        status: 'error',
-        data: null
-      });
-    } else {
-      logger.error(`Error permanently deleting order: ${error.message}`);
-      res.status(500).json({
-        statusCode: 500,
-        message: 'Internal server error',
-        status: 'error',
-        error: error.message
-      });
-    }
+    logger.error(`Error permanently deleting admin: ${error.message}`);
+    res.status(500).json({
+      statusCode: 500,
+      message: 'Internal server error',
+      status: 'error',
+      error: error.message
+    });
   }
 }
 
 module.exports = {
-  createOrder,
-  getOrders,
-  getOrderById,
-  updateOrder,
-  deleteOrder,
-  permanentlyDeleteOrder
+  createAdmin,
+  getAdmins,
+  getAdminById,
+  updateAdmin,
+  deleteAdmin,
+  permanentlyDeleteAdmin
 };

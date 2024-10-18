@@ -4,7 +4,8 @@ const cors = require('cors');
 const morgan = require('morgan');
 
 // Import routes
-// const retailerRoutes = require('./routes/retailers');
+const adminRoutes = require('./routes/adminRoutes');
+const retailerRoutes = require('./routes/retailerRoutes');
 const productRoutes = require('./routes/productRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 
@@ -18,7 +19,9 @@ app.get('/', (req, res) => {
   res.send('Welcome to Fresh Produce Platform');
 });
 
-// app.use('/api/retailers', retailerRoutes);
+// Use routes
+app.use('/api/v1/admins', adminRoutes);
+app.use('/api/v1/retailers', retailerRoutes);
 app.use('/api/v1/products', productRoutes);
 app.use('/api/v1/orders', orderRoutes);
 

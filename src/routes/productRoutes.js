@@ -8,6 +8,9 @@ router.post('/', productController.createProduct);
 // Route to get all products with pagination
 router.get('/', productController.getProducts);
 
+// Route to get products by category with pagination
+router.get('/category/:category', productController.getProductsByCategory);
+
 // Route to get product by ID
 router.get('/:id', productController.getProductById);
 

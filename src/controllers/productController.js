@@ -8,6 +8,7 @@ const paginationSchema = Joi.object({
   page: Joi.number().integer().min(1).default(1),
   limit: Joi.number().integer().min(1).default(10)
 });
+const categorySchema = Joi.string().valid('Poultry', 'Dairy', 'Serials', 'Vegetables', 'Fruits').required();
 
 // Function to create a new product
 async function createProduct (req, res) {
@@ -54,6 +55,38 @@ async function getProducts (req, res) {
     });
   } catch (error) {
     logger.error(`Error fetching products: ${error.message}`);
+    res.status(500).json({
+      statusCode: 500,
+      message: 'Internal server error',
+      status: 'error',
+      error: error.message
+    });
+  }
+}
+
+// Function to get products by category
+async function getProductsByCategory (req, res) {
+  try {
+    const { error, value } = categorySchema.validate(req.params.category);
+    if (error) {
+      return res.status(400).json({
+        statusCode: 400,
+        message: 'Bad request',
+        status: 'error',
+        error: error.message
+      });
+    }
+
+    const products = await productService.getProductsByCategory(value, req.query.page, req.query.limit);
+    logger.info(`Fetched ${products.length} products in category ${value}`);
+    res.status(200).json({
+      statusCode: 200,
+      message: 'Products fetched successfully',
+      status: 'success',
+      data: products
+    });
+  } catch (error) {
+    logger.error(`Error fetching products by category: ${error.message}`);
     res.status(500).json({
       statusCode: 500,
       message: 'Internal server error',
@@ -230,6 +263,7 @@ async function permanentlyDeleteProduct (req, res) {
 module.exports = {
   createProduct,
   getProducts,
+  getProductsByCategory,
   getProductById,
   updateProduct,
   deleteProduct,
