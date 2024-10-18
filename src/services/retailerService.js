@@ -18,6 +18,21 @@ async function createRetailer(retailer) {
     throw new Error(`Validation error: ${error.details[0].message}`);
   }
 
+  if (!retailer.name) {
+    return new Error('Name is required');
+  }
+
+  if (!retailer.email) {
+    return new Error('Email is required');
+  }
+
+  if (!retailer.password) {
+    return new Error('Password is required');
+  }
+  if (!retailer.profileImage) {
+    return new Error('Profile image is required');
+  }
+
   try {
     const newRetailer = await prisma.retailer.create({
       data: retailer,
