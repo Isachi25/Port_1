@@ -121,7 +121,9 @@ async function updateRetailer(req, res) {
     }
 
     // Add the file path to the request body
-    req.body.profileImage = req.file.path;
+    if (req.file) {
+      req.body.profileImage = req.file.path;
+    }
 
     const retailer = await retailerService.updateRetailer(req.params.id, req.body);
     logger.info(`Retailer updated: ${retailer.id}`);

@@ -11,8 +11,9 @@ const paginationSchema = Joi.object({
 const categorySchema = Joi.string().valid('Poultry', 'Dairy', 'Serials', 'Vegetables', 'Fruits').required();
 
 // Function to create a new product
-async function createProduct (req, res) {
+async function createProduct(req, res) {
   try {
+    req.body.image = req.file.path;
     const product = await productService.createProduct(req.body);
     logger.info(`Product created: ${product.id}`);
     res.status(201).json({
@@ -33,7 +34,7 @@ async function createProduct (req, res) {
 }
 
 // Function to get all products with pagination
-async function getProducts (req, res) {
+async function getProducts(req, res) {
   try {
     const { error, value } = paginationSchema.validate(req.query);
     if (error) {
@@ -65,7 +66,7 @@ async function getProducts (req, res) {
 }
 
 // Function to get products by category
-async function getProductsByCategory (req, res) {
+async function getProductsByCategory(req, res) {
   try {
     const { error, value } = categorySchema.validate(req.params.category);
     if (error) {
@@ -97,7 +98,7 @@ async function getProductsByCategory (req, res) {
 }
 
 // Function to get product by ID
-async function getProductById (req, res) {
+async function getProductById(req, res) {
   try {
     const { error } = idSchema.validate(req.params.id);
     if (error) {
@@ -138,7 +139,7 @@ async function getProductById (req, res) {
 }
 
 // Function to update product
-async function updateProduct (req, res) {
+async function updateProduct(req, res) {
   try {
     const { error } = idSchema.validate(req.params.id);
     if (error) {
@@ -148,6 +149,10 @@ async function updateProduct (req, res) {
         status: 'error',
         error: error.message
       });
+    }
+
+    if (req.file) {
+      req.body.image = req.file.path;
     }
 
     const product = await productService.updateProduct(req.params.id, req.body);
@@ -179,7 +184,7 @@ async function updateProduct (req, res) {
 }
 
 // Function to delete product (soft delete)
-async function deleteProduct (req, res) {
+async function deleteProduct(req, res) {
   try {
     const { error } = idSchema.validate(req.params.id);
     if (error) {
@@ -220,7 +225,7 @@ async function deleteProduct (req, res) {
 }
 
 // Function to permanently delete product
-async function permanentlyDeleteProduct (req, res) {
+async function permanentlyDeleteProduct(req, res) {
   try {
     const { error } = idSchema.validate(req.params.id);
     if (error) {

@@ -15,15 +15,26 @@ const productSchema = Joi.object({
 });
 
 // Function to create a new product
-async function createProduct (product) {
+async function createProduct(product) {
   const { error } = productSchema.validate(product);
   if (error) {
     throw new Error(`Validation error: ${error.details[0].message}`);
   }
 
   try {
+    // Extract individual fields
+    const { name, price, availability, description, image, retailerId, category } = product;
+
     const newProduct = await prisma.product.create({
-      data: product
+      data: {
+        name,
+        price,
+        availability,
+        description,
+        image,
+        retailerId,
+        category
+      }
     });
     logger.info(`Product created: ${newProduct.id}`);
     return newProduct;
@@ -34,7 +45,7 @@ async function createProduct (product) {
 }
 
 // Function to get all products with pagination
-async function getProducts (page = 1, limit = 10) {
+async function getProducts(page = 1, limit = 10) {
   try {
     const products = await prisma.product.findMany({
       skip: (page - 1) * limit,
@@ -49,7 +60,7 @@ async function getProducts (page = 1, limit = 10) {
 }
 
 // Function to get products by category
-async function getProductsByCategory (category, page = 1, limit = 10) {
+async function getProductsByCategory(category, page = 1, limit = 10) {
   const categorySchema = Joi.string().valid('Poultry', 'Dairy', 'Serials', 'Vegetables', 'Fruits').required();
   const { error } = categorySchema.validate(category);
   if (error) {
@@ -73,7 +84,7 @@ async function getProductsByCategory (category, page = 1, limit = 10) {
 }
 
 // Function to get product by ID
-async function getProductById (id) {
+async function getProductById(id) {
   try {
     const product = await prisma.product.findUnique({
       where: {
@@ -94,7 +105,7 @@ async function getProductById (id) {
 }
 
 // Function to update product
-async function updateProduct (id, product) {
+async function updateProduct(id, product) {
   const { error } = productSchema.validate(product);
   if (error) {
     throw new Error(`Validation error: ${error.details[0].message}`);
@@ -111,11 +122,22 @@ async function updateProduct (id, product) {
       throw new Error('Product not found');
     }
 
+    // Extract individual fields
+    const { name, price, availability, description, image, retailerId, category } = product;
+
     const updatedProduct = await prisma.product.update({
       where: {
         id
       },
-      data: product
+      data: {
+        name,
+        price,
+        availability,
+        description,
+        image,
+        retailerId,
+        category
+      }
     });
     logger.info(`Product updated: ${updatedProduct.id}`);
     return updatedProduct;
@@ -126,7 +148,7 @@ async function updateProduct (id, product) {
 }
 
 // Function to delete product (soft delete)
-async function deleteProduct (id) {
+async function deleteProduct(id) {
   try {
     const existingProduct = await prisma.product.findUnique({
       where: {
@@ -155,7 +177,7 @@ async function deleteProduct (id) {
 }
 
 // Function to permanently delete product
-async function permanentlyDeleteProduct (id) {
+async function permanentlyDeleteProduct(id) {
   try {
     const existingProduct = await prisma.product.findUnique({
       where: {
