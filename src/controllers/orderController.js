@@ -167,7 +167,12 @@ async function deleteOrder (req, res) {
 
     await orderService.deleteOrder(req.params.id);
     logger.info(`Order deleted: ${req.params.id}`);
-    res.status(204).end();
+    res.status(200).json({
+      statusCode: 200,
+      message: 'Order deleted successfully',
+      status: 'success',
+      data: null
+    });
   } catch (error) {
     if (error.message === 'Order not found') {
       res.status(404).json({
