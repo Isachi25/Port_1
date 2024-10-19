@@ -107,7 +107,7 @@ async function getOrderById (id) {
 }
 
 // Function to update order
-async function updateOrder (id, order) {
+async function updateOrder(id, order) {
   const { error } = orderSchema.validate(order);
   if (error) {
     throw new Error(`Validation error: ${error.details[0].message}`);
@@ -124,11 +124,22 @@ async function updateOrder (id, order) {
     if (!existingOrder || existingOrder.deletedAt) {
       throw new Error('Order not found');
     }
+
+    // Extract individual fields
+    const { productId, clientName, phoneNumber, email, address, status } = order;
+
     const updatedOrder = await prisma.order.update({
       where: {
         id
       },
-      data: order
+      data: {
+        productId,
+        clientName,
+        phoneNumber,
+        email,
+        address,
+        status
+      }
     });
     logger.info(`Order updated: ${updatedOrder.id}`);
     return updatedOrder;
