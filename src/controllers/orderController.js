@@ -105,7 +105,7 @@ async function getOrderById (req, res) {
 }
 
 // Function to update order
-async function updateOrder(req, res) {
+async function updateOrder (req, res) {
   try {
     const { error } = idSchema.validate(req.params.id);
     if (error) {
@@ -133,18 +133,11 @@ async function updateOrder(req, res) {
         status: 'error',
         error: error.message
       });
-    } else if (error.message.startsWith('Validation error')) {
+    } else {
+      logger.error(`Error updating order: ${error.message}`);
       res.status(400).json({
         statusCode: 400,
         message: 'Bad request',
-        status: 'error',
-        error: error.message
-      });
-    } else {
-      logger.error(`Error updating order: ${error.message}`);
-      res.status(500).json({
-        statusCode: 500,
-        message: 'Internal server error',
         status: 'error',
         error: error.message
       });
