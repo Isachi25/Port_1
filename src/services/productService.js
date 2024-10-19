@@ -25,10 +25,13 @@ async function createProduct(product) {
     // Extract individual fields
     const { name, price, availability, description, image, retailerId, category } = product;
 
+    // Ensure price is a float
+    const priceFloat = parseFloat(price);
+
     const newProduct = await prisma.product.create({
       data: {
         name,
-        price,
+        price: priceFloat,
         availability,
         description,
         image,
@@ -125,13 +128,16 @@ async function updateProduct(id, product) {
     // Extract individual fields
     const { name, price, availability, description, image, retailerId, category } = product;
 
+    // Ensure price is a float
+    const priceFloat = parseFloat(price);
+
     const updatedProduct = await prisma.product.update({
       where: {
         id
       },
       data: {
         name,
-        price,
+        price: priceFloat,
         availability,
         description,
         image,
