@@ -14,7 +14,10 @@ router.get('/:id', orderController.getOrderById);
 // Route to update order
 router.put('/:id', orderController.updateOrder);
 
-// Route to delete order
+// Route to soft delete order
 router.delete('/:id', orderController.deleteOrder);
+
+// Route to permanently delete order
+router.delete('/:id/permanent', orderController.permanentlyDeleteOrder);
 
 module.exports = router;
