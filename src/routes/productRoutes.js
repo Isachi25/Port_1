@@ -21,6 +21,6 @@ router.put('/:id', productController.updateProduct);
 router.delete('/:id', productController.deleteProduct);
 
 // Route to permanently delete product
-router.delete('/permanent/:id', productController.permanentlyDeleteProduct);
+router.delete('/:id/permanent', productController.permanentlyDeleteProduct);
 
 module.exports = router;
