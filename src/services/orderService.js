@@ -69,9 +69,6 @@ async function getOrders (page = 1, limit = 10) {
     const orders = await prisma.order.findMany({
       skip: (page - 1) * limit,
       take: limit,
-      where: {
-        deletedAt: null
-      }
     });
     logger.info(`Fetched ${orders.length} orders`);
     return orders;
