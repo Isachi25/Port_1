@@ -197,7 +197,12 @@ async function deleteAdmin(req, res) {
 
     await adminService.deleteAdmin(req.params.id);
     logger.info(`Admin deleted: ${req.params.id}`);
-    res.status(204).end();
+    res.status(200).json({
+      statusCode: 200,
+      message: 'Admin deleted successfully',
+      status: 'success',
+      data: null
+    });
   } catch (error) {
     logger.error(`Error deleting admin: ${error.message}`);
     res.status(500).json({
