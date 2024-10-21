@@ -19,8 +19,16 @@ async function createAdmin(admin) {
   }
 
   try {
+    // Extract individual fields
+    const { name, email, password, profileImage } = admin;
+
     const newAdmin = await prisma.admin.create({
-      data: admin,
+      data: {
+        name,
+        email,
+        password,
+        profileImage,
+      },
     });
     logger.info(`Admin created: ${newAdmin.id}`);
     return newAdmin;
@@ -36,9 +44,6 @@ async function getAdmins(page = 1, limit = 10) {
     const admins = await prisma.admin.findMany({
       skip: (page - 1) * limit,
       take: limit,
-      where: {
-        deletedAt: null,
-      },
     });
     logger.info(`Fetched ${admins.length} admins`);
     return admins;
@@ -88,11 +93,19 @@ async function updateAdmin(id, admin) {
       throw new Error('Admin not found');
     }
 
+    // Extract individual fields
+    const { name, email, password, profileImage } = admin;
+
     const updatedAdmin = await prisma.admin.update({
       where: {
         id: id,
       },
-      data: admin,
+      data: {
+        name,
+        email,
+        password,
+        profileImage,
+      },
     });
     logger.info(`Admin updated: ${updatedAdmin.id}`);
     return updatedAdmin;
