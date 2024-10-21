@@ -40,7 +40,7 @@ async function loginAdmin(req, res) {
   try {
     const { email, password } = req.body;
     const admin = await adminService.loginAdmin(email, password);
-    const token = await generateToken({ id: admin.id });
+    const token = generateToken(admin.id);
     logger.info(`Admin logged in: ${admin.id}`);
     res.status(200).json({
       statusCode: 200,
