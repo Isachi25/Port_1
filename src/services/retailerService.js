@@ -15,6 +15,12 @@ const retailerSchema = Joi.object({
   profileImage: Joi.string().required(),
 });
 
+// Validation schema for login
+const loginSchema = Joi.object({
+  email: Joi.string().email().required(),
+  password: Joi.string().required(),
+});
+
 // Function to create a new retailer
 async function createRetailer(retailer) {
   const { error } = retailerSchema.validate(retailer);
@@ -45,8 +51,9 @@ async function createRetailer(retailer) {
   }
 }
 
+// Function to login a retailer
 async function loginRetailer(email, password) {
-  const { error } = retailerSchema.validate({ email, password });
+  const { error } = loginSchema.validate({ email, password });
   if (error) {
     throw new Error(`Validation error: ${error.details[0].message}`);
   }
