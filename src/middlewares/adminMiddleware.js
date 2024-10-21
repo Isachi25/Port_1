@@ -31,11 +31,10 @@ async function adminMiddleware(req, res, next) {
 
   try {
     const decoded = jwt.verify(token, JWT_SECRET);
-    console.log(decoded);
-    const decodeId = decoded.id.id;
+    const userId = decoded.id;
     const user = await prisma.admin.findUnique({
       where: {
-        id: decodeId
+        id: userId
       }
     });
     if (!user || user.role !== 'admin') {
