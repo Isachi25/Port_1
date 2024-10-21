@@ -5,9 +5,20 @@ const JWT_SECRET = process.env.JWT_SECRET || 'ISachiJwtSecret';
 
 // Middleware to verify JWT token and check if user is an admin
 function adminMiddleware(req, res, next) {
-  const token = req.header('Authorization');
-  if (!token) {
+  const authHeader = req.header('Authorization');
+  if (!authHeader) {
     logger.error('No token provided');
+    return res.status(401).json({
+      statusCode: 401,
+      message: 'Bad request',
+      status: 'error',
+      error: 'Unauthorized'
+    });
+  }
+
+  const token = authHeader.split(' ')[1]; // Extract the token after 'Bearer'
+  if (!token) {
+    logger.error('Invalid token format');
     return res.status(401).json({
       statusCode: 401,
       message: 'Bad request',
