@@ -27,7 +27,7 @@ async function createAdmin(admin) {
 
   try {
     // Extract individual fields
-    const { name, email, password, profileImage } = admin;
+    const { name, email, password, profileImage, role } = admin;
 
     // Hash the password before saving
     const hashedPassword = await hashPassword(password);
@@ -36,9 +36,9 @@ async function createAdmin(admin) {
       data: {
         name,
         email,
-        role: 'admin',
         password: hashedPassword,
         profileImage,
+        role
       },
     });
     logger.info(`Admin created: ${newAdmin.id}`);
