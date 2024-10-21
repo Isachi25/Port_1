@@ -41,7 +41,7 @@ async function loginRetailer(req, res) {
     const { email, password } = req.body;
 
     const retailer = await retailerService.loginRetailer(email, password);
-    const token = await generateToken({ id: retailer.id, role: 'retailer' });
+    const token = await generateToken({ id: retailer.id });
 
     logger.info(`Retailer logged in: ${retailer.id}`);
     res.status(200).json({
