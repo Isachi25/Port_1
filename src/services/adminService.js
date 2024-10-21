@@ -136,7 +136,7 @@ async function updateAdmin(id, admin) {
     }
 
     // Extract individual fields
-    const { name, email, password, profileImage } = admin;
+    const { name, email, password, profileImage, role } = admin;
 
     const updatedAdmin = await prisma.admin.update({
       where: {
@@ -147,6 +147,7 @@ async function updateAdmin(id, admin) {
         email,
         password,
         profileImage,
+        role
       },
     });
     logger.info(`Admin updated: ${updatedAdmin.id}`);

@@ -15,7 +15,7 @@ async function createAdmin(req, res) {
   try {
     // Add the file path to the request body
     req.body.profileImage = req.file.path;
-    
+
     const admin = await adminService.createAdmin(req.body);
     logger.info(`Admin created: ${admin.id}`);
     res.status(201).json({
@@ -51,7 +51,8 @@ async function loginAdmin(req, res) {
         id: admin.id,
         name: admin.name,
         email: admin.email,
-        profileImage: admin.profileImage
+        profileImage: admin.profileImage,
+        role: admin.role
       }
     });
   } catch (error) {
