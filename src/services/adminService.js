@@ -10,6 +10,7 @@ const adminSchema = Joi.object({
   email: Joi.string().email().required(),
   password: Joi.string().required(),
   profileImage: Joi.string().required(),
+  role: Joi.string().valid('admin').default('admin')
 });
 
 // Validation schema for login
