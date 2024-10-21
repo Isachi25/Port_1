@@ -2,6 +2,7 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const Joi = require('joi');
 const logger = require('../utils/logger');
+const { hashPassword, verifyPassword } = require('../utils/hashPassword');
 
 // Validation schema
 const adminSchema = Joi.object({
@@ -9,6 +10,12 @@ const adminSchema = Joi.object({
   email: Joi.string().email().required(),
   password: Joi.string().required(),
   profileImage: Joi.string().required(),
+});
+
+// Validation schema for login
+const loginSchema = Joi.object({
+  email: Joi.string().email().required(),
+  password: Joi.string().required(),
 });
 
 // Function to create a new admin
@@ -22,11 +29,14 @@ async function createAdmin(admin) {
     // Extract individual fields
     const { name, email, password, profileImage } = admin;
 
+    // Hash the password before saving
+    const hashedPassword = await hashPassword(password);
+
     const newAdmin = await prisma.admin.create({
       data: {
         name,
         email,
-        password,
+        password: hashedPassword,
         profileImage,
       },
     });
@@ -35,6 +45,36 @@ async function createAdmin(admin) {
   } catch (err) {
     logger.error(`Error creating admin: ${err.message}`);
     throw new Error('Error creating admin');
+  }
+}
+
+async function loginAdmin(email, password) {
+  const { error } = loginSchema.validate({ email, password });
+  if (error) {
+    throw new Error(`Validation error: ${error.details[0].message}`);
+  }
+
+  try {
+    const admin = await prisma.admin.findUnique({
+      where: {
+        email: email,
+      },
+    });
+
+    if (!admin || admin.deletedAt) {
+      throw new Error('Invalid email or password');
+    }
+
+    const passwordMatch = await verifyPassword(password, admin.password);
+    if (!passwordMatch) {
+      throw new Error('Invalid email or password');
+    }
+
+    logger.info(`Admin logged in: ${admin.id}`);
+    return admin;
+  } catch (err) {
+    logger.error(`Error logging in admin: ${err.message}`);
+    throw new Error('Error logging in admin');
   }
 }
 
@@ -162,6 +202,7 @@ async function permanentlyDeleteAdmin(id) {
 
 module.exports = {
   createAdmin,
+  loginAdmin,
   getAdmins,
   getAdminById,
   updateAdmin,

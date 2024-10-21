@@ -1,6 +1,7 @@
 const adminService = require('../services/adminService');
 const Joi = require('joi');
 const logger = require('../utils/logger');
+const { generateToken } = require('../utils/hashPassword');
 
 // Validation schemas
 const idSchema = Joi.string().required();
@@ -22,6 +23,36 @@ async function createAdmin(req, res) {
     });
   } catch (error) {
     logger.error(`Error creating admin: ${error.message}`);
+    res.status(400).json({
+      statusCode: 400,
+      message: 'Bad request',
+      status: 'error',
+      error: error.message
+    });
+  }
+}
+
+// Function to login an admin
+async function loginAdmin(req, res) {
+  try {
+    const { email, password } = req.body;
+    const admin = await adminService.loginAdmin(email, password);
+    const token = await generateToken({ id: admin.id });
+    logger.info(`Admin logged in: ${admin.id}`);
+    res.status(200).json({
+      statusCode: 200,
+      message: 'Admin logged in successfully',
+      status: 'success',
+      data: {
+        accessToken: token,
+        id: admin.id,
+        name: admin.name,
+        email: admin.email,
+        profileImage: admin.profileImage
+      }
+    });
+  } catch (error) {
+    logger.error(`Error logging in admin: ${error.message}`);
     res.status(400).json({
       statusCode: 400,
       message: 'Bad request',
@@ -206,6 +237,7 @@ async function permanentlyDeleteAdmin(req, res) {
 
 module.exports = {
   createAdmin,
+  loginAdmin,
   getAdmins,
   getAdminById,
   updateAdmin,

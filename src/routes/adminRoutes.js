@@ -7,6 +7,9 @@ const router = express.Router();
 // Route to create a new admin
 router.post('/', adminController.createAdmin);
 
+// Route to login an admin
+router.post('/login', adminController.loginAdmin);
+
 // Route to get all admins with pagination
 router.get('/', adminMiddleware, adminController.getAdmins);
 
