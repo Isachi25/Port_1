@@ -1,6 +1,7 @@
 const retailerService = require('../services/retailerService');
 const Joi = require('joi');
 const logger = require('../utils/logger');
+const { generateToken } = require('../utils/hashPassword');
 
 // Validation schemas
 const idSchema = Joi.string().required();
@@ -28,6 +29,40 @@ async function createRetailer(req, res) {
     res.status(400).json({
       statusCode: 400,
       message: 'Bad request',
+      status: 'error',
+      error: error.message
+    });
+  }
+}
+
+// Function to login a retailer
+async function loginRetailer(req, res) {
+  try {
+    const { email, password } = req.body;
+
+    const retailer = await retailerService.loginRetailer(email, password);
+    const token = generateToken(retailer.id);
+
+    logger.info(`Retailer logged in: ${retailer.id}`);
+    res.status(200).json({
+      statusCode: 200,
+      message: 'Retailer logged in successfully',
+      status: 'success',
+      data: {
+        token,
+        retailer: {
+          id: retailer.id,
+          name: retailer.name,
+          email: retailer.email,
+          profileImage: retailer.profileImage,
+        },
+      },
+    });
+  } catch (error) {
+    logger.error(`Error logging in retailer: ${error.message}`);
+    res.status(401).json({
+      statusCode: 401,
+      message: 'Unauthorized',
       status: 'error',
       error: error.message
     });
@@ -219,6 +254,7 @@ async function permanentlyDeleteRetailer(req, res) {
 
 module.exports = {
   createRetailer,
+  loginRetailer,
   getRetailers,
   getRetailerById,
   updateRetailer,

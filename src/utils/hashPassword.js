@@ -7,4 +7,18 @@ async function hashPassword(password) {
   return hashedPassword;
 }
 
-module.exports = hashPassword;
+// Function to verify a hashed password
+async function verifyPassword(password, hashedPassword) {
+  const isMatch = await bcrypt.compare(password, hashedPassword);
+  return isMatch;
+}
+
+async function generateToken(payload) {
+  return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1d' });
+}
+
+module.exports = {
+  hashPassword,
+  verifyPassword,
+  generateToken,
+};

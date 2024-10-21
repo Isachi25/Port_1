@@ -2,7 +2,10 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const Joi = require('joi');
 const logger = require('../utils/logger');
-const hashPassword = require('../utils/hashPassword');
+const {
+  hashPassword,
+  verifyPassword,
+} = require('../utils/hashPassword');
 
 // Validation schema
 const retailerSchema = Joi.object({
@@ -39,6 +42,36 @@ async function createRetailer(retailer) {
   } catch (err) {
     logger.error(`Error creating retailer: ${err.message}`);
     throw new Error('Error creating retailer');
+  }
+}
+
+async function loginRetailer(email, password) {
+  const { error } = retailerSchema.validate({ email, password });
+  if (error) {
+    throw new Error(`Validation error: ${error.details[0].message}`);
+  }
+
+  try {
+    const retailer = await prisma.retailer.findUnique({
+      where: {
+        email,
+      },
+    });
+
+    if (!retailer || retailer.deletedAt) {
+      throw new Error('Invalid email or password');
+    }
+
+    const isPasswordMatch = await verifyPassword(password, retailer.password);
+    if (!isPasswordMatch) {
+      throw new Error('Invalid email or password');
+    }
+
+    logger.info(`Retailer logged in: ${retailer.id}`);
+    return retailer;
+  } catch (err) {
+    logger.error(`Error logging in retailer: ${err.message}`);
+    throw new Error('Error logging in retailer');
   }
 }
 
@@ -167,6 +200,7 @@ async function permanentlyDeleteRetailer(id) {
 
 module.exports = {
   createRetailer,
+  loginRetailer,
   getRetailers,
   getRetailerById,
   updateRetailer,

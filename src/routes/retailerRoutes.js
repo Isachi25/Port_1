@@ -8,6 +8,9 @@ const router = express.Router();
 // Route to create a new retailer
 router.post('/', retailerController.createRetailer);
 
+// Route to login a retailer
+router.post('/login', retailerController.loginRetailer);
+
 // Route to get all retailers with pagination
 router.get('/', authMiddleware, adminMiddleware, retailerController.getRetailers);
 
