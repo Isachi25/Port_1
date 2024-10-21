@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 });
 
 // Use routes
-app.use('/api/v1/admins', adminRoutes);
+app.use('/api/v1/admins', upload.single('profileImage'), adminRoutes);
 app.use('/api/v1/retailers', upload.single('profileImage'), retailerRoutes);
 app.use('/api/v1/products', upload.single('image'), productRoutes);
 app.use('/api/v1/orders', orderRoutes);
