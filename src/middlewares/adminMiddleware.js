@@ -1,10 +1,12 @@
 const jwt = require('jsonwebtoken');
 const logger = require('../utils/logger');
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 
 const JWT_SECRET = process.env.JWT_SECRET || 'ISachiJwtSecret';
 
 // Middleware to verify JWT token and check if user is an admin
-function adminMiddleware(req, res, next) {
+async function adminMiddleware(req, res, next) {
   const authHeader = req.header('Authorization');
   if (!authHeader) {
     logger.error('No token provided');
@@ -16,7 +18,7 @@ function adminMiddleware(req, res, next) {
     });
   }
 
-  const token = authHeader.split(' ')[1]; // Extract the token after 'Bearer'
+  const token = authHeader.split(' ')[1];
   if (!token) {
     logger.error('Invalid token format');
     return res.status(401).json({
@@ -29,8 +31,14 @@ function adminMiddleware(req, res, next) {
 
   try {
     const decoded = jwt.verify(token, JWT_SECRET);
-    if (decoded.role !== 'admin') {
-      logger.error('Invalid role');
+    const decodeId = decoded.id;
+    const user = await prisma.admin.findUnique({
+      where: {
+        id: decodeId
+      }
+    });
+    if (!user || user.role !== 'admin') {
+      logger.error('User is not an admin');
       return res.status(403).json({
         statusCode: 403,
         message: 'Forbidden',
