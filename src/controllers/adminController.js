@@ -13,6 +13,9 @@ const paginationSchema = Joi.object({
 // Function to create a new admin
 async function createAdmin(req, res) {
   try {
+    // Add the file path to the request body
+    req.body.profileImage = req.file.path;
+    
     const admin = await adminService.createAdmin(req.body);
     logger.info(`Admin created: ${admin.id}`);
     res.status(201).json({
