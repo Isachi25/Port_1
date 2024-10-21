@@ -142,6 +142,8 @@ async function getAdminById(req, res) {
 // Function to update admin
 async function updateAdmin(req, res) {
   try {
+    // Add the file path to the request body
+    req.body.profileImage = req.file.path;
     const { error } = idSchema.validate(req.params.id);
     if (error) {
       return res.status(400).json({
