@@ -36,6 +36,7 @@ async function createAdmin(admin) {
       data: {
         name,
         email,
+        role: 'admin',
         password: hashedPassword,
         profileImage,
       },
