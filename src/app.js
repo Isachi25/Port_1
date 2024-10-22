@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
 const multer = require('multer');
+const path = require('path');
 
 // Import routes
 const adminRoutes = require('./routes/adminRoutes');
@@ -19,7 +20,10 @@ app.use(cors());
 app.use(morgan('combined'));
 
 // Configure multer for file uploads
-const upload = multer({ dest: 'uploads/' });
+const upload = multer({ dest: path.join(__dirname, '../uploads') });
+
+// Serve static files from the 'uploads' directory
+app.use('/api/v1/uploads', express.static(path.join(__dirname, '../uploads')));
 
 app.get('/', (req, res) => {
   res.send('Welcome to Fresh Produce Platform');

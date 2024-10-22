@@ -7,7 +7,7 @@ const { authMiddleware } = require('../middlewares/authMiddleware');
 router.post('/', authMiddleware, productController.createProduct);
 
 // Route to get all products with pagination
-router.get('/', authMiddleware, productController.getProducts);
+router.get('/', productController.getProducts);
 
 // Route to get products by category with pagination
 router.get('/category/:category', authMiddleware, productController.getProductsByCategory);

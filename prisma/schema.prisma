@@ -11,7 +11,7 @@ enum OrderStatus {
 enum ProductCategory {
   Poultry
   Dairy
-  Serials
+  Cereals
   Vegetables
   Fruits
 }

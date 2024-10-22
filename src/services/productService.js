@@ -11,7 +11,7 @@ const productSchema = Joi.object({
   description: Joi.string().required(),
   image: Joi.string().required(),
   retailerId: Joi.string().required(),
-  category: Joi.string().valid('Poultry', 'Dairy', 'Serials', 'Vegetables', 'Fruits').required()
+  category: Joi.string().valid('Poultry', 'Dairy', 'Cereals', 'Vegetables', 'Fruits').required()
 });
 
 // Function to create a new product
@@ -65,7 +65,7 @@ async function getProducts(page = 1, limit = 10) {
 
 // Function to get products by category
 async function getProductsByCategory(category, page = 1, limit = 10) {
-  const categorySchema = Joi.string().valid('Poultry', 'Dairy', 'Serials', 'Vegetables', 'Fruits').required();
+  const categorySchema = Joi.string().valid('Poultry', 'Dairy', 'cereals', 'Vegetables', 'Fruits').required();
   const { error } = categorySchema.validate(category);
   if (error) {
     throw new Error(`Validation error: ${error.details[0].message}`);
