@@ -75,3 +75,194 @@ Inconsistent query result: Field product is required to return data, got `null` 
 2024-10-16T14:34:19.185Z info: Fetched 0 products
 2024-10-18T11:56:49.166Z info: Fetched 0 products
 2024-10-18T11:56:49.179Z info: Fetched 0 products
+2024-10-21T10:47:27.712Z error: Error logging in retailer: Validation error: "name" is required
+2024-10-21T10:57:01.348Z error: Error logging in retailer: Validation error: "email" is required
+2024-10-21T10:57:35.337Z error: Error logging in retailer: Validation error: "email" is required
+2024-10-21T10:58:47.250Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-21T11:13:11.872Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-21T11:13:11.881Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-21T11:26:05.680Z error: Error verifying token: invalid token
+2024-10-21T11:33:00.711Z error: Error verifying token: invalid token
+2024-10-21T11:33:30.662Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-21T11:33:30.668Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-21T11:33:49.821Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-21T11:33:49.823Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-21T11:34:57.182Z info: Product created: cfb57e2d-c6f3-4454-81bf-8d8599cc0e1b
+2024-10-21T11:34:57.183Z info: Product created: cfb57e2d-c6f3-4454-81bf-8d8599cc0e1b
+2024-10-21T11:47:00.337Z error: Error creating admin: Validation error: "name" is required
+2024-10-21T11:49:35.356Z error: Error creating admin: Validation error: "profileImage" is required
+2024-10-21T11:50:26.551Z error: Error creating admin: Validation error: "profileImage" is required
+2024-10-21T11:54:21.914Z info: Admin created: 22e3a680-faa1-4254-be1b-8dc9349f5654
+2024-10-21T11:54:21.918Z info: Admin created: 22e3a680-faa1-4254-be1b-8dc9349f5654
+2024-10-21T12:00:00.165Z info: Admin logged in: 22e3a680-faa1-4254-be1b-8dc9349f5654
+2024-10-21T12:00:00.176Z info: Admin logged in: 22e3a680-faa1-4254-be1b-8dc9349f5654
+2024-10-21T12:03:48.718Z error: Invalid role
+2024-10-21T12:07:09.011Z error: Error creating admin: 
+Invalid `prisma.admin.create()` invocation in
+/home/sachi/Port_1/src/services/adminService.js:35:41
+
+  32 // Hash the password before saving
+  33 const hashedPassword = await hashPassword(password);
+  34 
+→ 35 const newAdmin = await prisma.admin.create({
+       data: {
+         name: "Shanic",
+         email: "iloveyou@gmail.com",
+         role: "admin",
+         ~~~~
+         password: "$2b$10$SvQeCjeYvIAUrhi4wyiKb.PWEdDXlrC4.Z3TPuuPqCEH5tRv8K.Qm",
+         profileImage: "uploads/c40a3af730c22e2fbb7ace6cc918f498",
+     ?   id?: String,
+     ?   createdAt?: DateTime,
+     ?   updatedAt?: DateTime,
+     ?   deletedAt?: DateTime | Null
+       }
+     })
+
+Unknown argument `role`. Did you mean `name`? Available options are marked with ?.
+2024-10-21T12:07:09.017Z error: Error creating admin: Error creating admin
+2024-10-21T12:07:22.426Z error: Error creating admin: 
+Invalid `prisma.admin.create()` invocation in
+/home/sachi/Port_1/src/services/adminService.js:35:41
+
+  32 // Hash the password before saving
+  33 const hashedPassword = await hashPassword(password);
+  34 
+→ 35 const newAdmin = await prisma.admin.create({
+       data: {
+         name: "Shanic",
+         email: "iloveyou@gmail.com",
+         role: "admin",
+         ~~~~
+         password: "$2b$10$DYPnmY5Bk//E7LELMseHBumtGCRbzrde4razrVwLsTbMDzbabOMFq",
+         profileImage: "uploads/7d85589be8ba7a24f2ad1a9c1f965dcb",
+     ?   id?: String,
+     ?   createdAt?: DateTime,
+     ?   updatedAt?: DateTime,
+     ?   deletedAt?: DateTime | Null
+       }
+     })
+
+Unknown argument `role`. Did you mean `name`? Available options are marked with ?.
+2024-10-21T12:07:22.426Z error: Error creating admin: Error creating admin
+2024-10-21T12:15:19.928Z error: Error creating admin: Validation error: "role" is not allowed
+2024-10-21T12:16:52.112Z error: Error creating admin: 
+Invalid `prisma.admin.create()` invocation in
+/home/sachi/Port_1/src/services/adminService.js:36:41
+
+  33 // Hash the password before saving
+  34 const hashedPassword = await hashPassword(password);
+  35 
+→ 36 const newAdmin = await prisma.admin.create({
+       data: {
+         name: "Shanic",
+         email: "iloveyou@gmail.com",
+         password: "$2b$10$8FkS6lH/aNmLs/V8eO.yAeRJjFJOXAtGiL0k9zqXkvARk6zYYqTOS",
+         profileImage: "uploads/a09ff70fb2603f3ab11d55c016fde07e",
+         role: "admin",
+         ~~~~
+     ?   id?: String,
+     ?   createdAt?: DateTime,
+     ?   updatedAt?: DateTime,
+     ?   deletedAt?: DateTime | Null
+       }
+     })
+
+Unknown argument `role`. Did you mean `name`? Available options are marked with ?.
+2024-10-21T12:16:52.116Z error: Error creating admin: Error creating admin
+2024-10-21T12:28:58.126Z info: Admin created: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T12:28:58.133Z info: Admin created: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T12:29:24.848Z info: Admin logged in: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T12:29:24.857Z info: Admin logged in: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T12:31:33.233Z info: Admin logged in: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T12:31:33.251Z info: Admin logged in: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T12:32:18.749Z error: Invalid role
+2024-10-21T12:32:24.359Z error: Invalid role
+2024-10-21T12:38:43.174Z error: Error verifying token: 
+Invalid `prisma.admin.findUnique()` invocation in
+/home/sachi/Port_1/src/middlewares/adminMiddleware.js:35:37
+
+  32 try {
+  33   const decoded = jwt.verify(token, JWT_SECRET);
+  34   const decodeId = decoded.id;
+→ 35   const user = await prisma.admin.findUnique({
+         where: {
+           id: {
+             id: "6ebb6913-4254-4608-a552-9e2b6677a9fd"
+           }
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         }
+       })
+
+Argument `id`: Invalid value provided. Expected String, provided Object.
+2024-10-21T12:43:13.196Z info: Fetched 1 admins
+2024-10-21T12:43:13.203Z info: Fetched 1 admins
+2024-10-21T12:50:16.385Z error: Error verifying token: 
+Invalid `prisma.admin.findUnique()` invocation in
+/home/sachi/Port_1/src/middlewares/adminMiddleware.js:35:37
+
+  32 try {
+  33   const decoded = jwt.verify(token, JWT_SECRET);
+  34   const userId = decoded.id;
+→ 35   const user = await prisma.admin.findUnique({
+         where: {
+           id: {
+             id: "6ebb6913-4254-4608-a552-9e2b6677a9fd"
+           }
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         }
+       })
+
+Argument `id`: Invalid value provided. Expected String, provided Object.
+2024-10-21T12:52:43.029Z error: Error verifying token: 
+Invalid `prisma.admin.findUnique()` invocation in
+/home/sachi/Port_1/src/middlewares/adminMiddleware.js:35:37
+
+  32 try {
+  33   const decoded = jwt.verify(token, JWT_SECRET);
+  34   const userId = decoded.id;
+→ 35   const user = await prisma.admin.findUnique({
+         where: {
+           id: {
+             id: "6ebb6913-4254-4608-a552-9e2b6677a9fd"
+           }
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         }
+       })
+
+Argument `id`: Invalid value provided. Expected String, provided Object.
+2024-10-21T12:52:48.844Z error: Error verifying token: 
+Invalid `prisma.admin.findUnique()` invocation in
+/home/sachi/Port_1/src/middlewares/adminMiddleware.js:35:37
+
+  32 try {
+  33   const decoded = jwt.verify(token, JWT_SECRET);
+  34   const userId = decoded.id;
+→ 35   const user = await prisma.admin.findUnique({
+         where: {
+           id: {
+             id: "6ebb6913-4254-4608-a552-9e2b6677a9fd"
+           }
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         }
+       })
+
+Argument `id`: Invalid value provided. Expected String, provided Object.
+2024-10-21T12:53:03.947Z info: Admin logged in: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T12:53:03.960Z info: Admin logged in: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T12:54:18.336Z info: Fetched 1 admins
+2024-10-21T12:54:18.338Z info: Fetched 1 admins
+2024-10-21T12:57:17.002Z info: Fetched admin: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T12:57:17.005Z info: Fetched admin: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T13:01:17.975Z error: No token provided
+2024-10-21T13:02:26.091Z error: Error updating admin: Validation error: "profileImage" is required
+2024-10-21T13:03:55.267Z info: Admin updated: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T13:03:55.275Z info: Admin updated: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T13:05:18.151Z info: Admin deleted: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T13:05:18.154Z info: Admin deleted: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T13:07:07.408Z info: Admin deleted: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T13:07:07.409Z info: Admin deleted: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T13:07:25.097Z info: Admin permanently deleted: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T13:07:25.100Z info: Admin permanently deleted: 6ebb6913-4254-4608-a552-9e2b6677a9fd
+2024-10-21T20:05:10.531Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-21T20:05:10.547Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
