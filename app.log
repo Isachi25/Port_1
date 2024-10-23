@@ -577,3 +577,1276 @@ Value 'Serials' not found in enum 'ProductCategory'
 2024-10-22T12:20:55.978Z info: Fetched 1 products
 2024-10-22T12:20:55.978Z info: Fetched 1 products
 2024-10-22T12:37:22.637Z error: Error verifying token: jwt malformed
+2024-10-22T12:45:45.254Z info: Fetched 1 products
+2024-10-22T12:45:45.258Z info: Fetched 1 products
+2024-10-22T12:46:39.308Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-22T12:46:39.313Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-22T12:46:39.463Z info: Fetched 1 products
+2024-10-22T12:46:39.463Z info: Fetched 1 products
+2024-10-22T12:46:44.458Z error: Error creating product: Cannot read properties of undefined (reading 'path')
+2024-10-22T12:47:26.694Z error: Error creating product: Cannot read properties of undefined (reading 'path')
+2024-10-22T12:47:37.338Z error: Error creating product: Cannot read properties of undefined (reading 'path')
+2024-10-22T12:47:41.074Z info: Fetched 1 products
+2024-10-22T12:47:41.075Z info: Fetched 1 products
+2024-10-22T12:48:15.606Z info: Product created: 61b5b190-6d5f-4092-bf81-c6710f0f932c
+2024-10-22T12:48:15.607Z info: Product created: 61b5b190-6d5f-4092-bf81-c6710f0f932c
+2024-10-22T12:49:01.361Z info: Fetched 2 products
+2024-10-22T12:49:01.361Z info: Fetched 2 products
+2024-10-22T12:50:06.092Z info: Fetched 2 products
+2024-10-22T12:50:06.092Z info: Fetched 2 products
+2024-10-22T12:50:38.499Z info: Fetched 2 products
+2024-10-22T12:50:38.499Z info: Fetched 2 products
+2024-10-22T12:51:56.907Z info: Fetched 2 products
+2024-10-22T12:51:56.908Z info: Fetched 2 products
+2024-10-22T12:52:31.446Z info: Fetched 2 products
+2024-10-22T12:52:31.447Z info: Fetched 2 products
+2024-10-22T12:54:32.650Z info: Fetched 2 products
+2024-10-22T12:54:32.650Z info: Fetched 2 products
+2024-10-23T09:12:07.901Z info: Fetched 2 products
+2024-10-23T09:12:07.907Z info: Fetched 2 products
+2024-10-23T09:29:20.763Z info: Fetched 2 products
+2024-10-23T09:29:20.764Z info: Fetched 2 products
+2024-10-23T09:31:21.108Z info: Fetched 2 products
+2024-10-23T09:31:21.109Z info: Fetched 2 products
+2024-10-23T09:31:41.989Z info: Fetched 2 products
+2024-10-23T09:31:41.990Z info: Fetched 2 products
+2024-10-23T09:32:58.012Z info: Fetched 2 products
+2024-10-23T09:32:58.013Z info: Fetched 2 products
+2024-10-23T09:53:52.567Z info: Fetched 2 products
+2024-10-23T09:53:52.569Z info: Fetched 2 products
+2024-10-23T10:07:18.792Z info: Fetched 2 products
+2024-10-23T10:07:18.792Z info: Fetched 2 products
+2024-10-23T10:09:35.701Z info: Fetched 2 products
+2024-10-23T10:09:35.702Z info: Fetched 2 products
+2024-10-23T10:10:10.335Z info: Fetched 2 products
+2024-10-23T10:10:10.335Z info: Fetched 2 products
+2024-10-23T10:10:19.388Z info: Fetched 2 products
+2024-10-23T10:10:19.389Z info: Fetched 2 products
+2024-10-23T10:13:28.629Z info: Fetched 2 products
+2024-10-23T10:13:28.630Z info: Fetched 2 products
+2024-10-23T10:13:59.909Z info: Fetched 2 products
+2024-10-23T10:13:59.910Z info: Fetched 2 products
+2024-10-23T10:29:24.862Z info: Fetched 2 products
+2024-10-23T10:29:24.862Z info: Fetched 2 products
+2024-10-23T10:30:54.520Z info: Fetched 2 products
+2024-10-23T10:30:54.520Z info: Fetched 2 products
+2024-10-23T11:02:01.996Z info: Fetched 2 products
+2024-10-23T11:02:01.997Z info: Fetched 2 products
+2024-10-23T11:05:40.953Z info: Fetched 2 products
+2024-10-23T11:05:40.954Z info: Fetched 2 products
+2024-10-23T11:06:06.420Z info: Fetched 2 products
+2024-10-23T11:06:06.420Z info: Fetched 2 products
+2024-10-23T11:11:34.200Z info: Fetched 2 products
+2024-10-23T11:11:34.201Z info: Fetched 2 products
+2024-10-23T11:12:48.446Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-23T11:12:48.450Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-23T11:12:48.609Z info: Fetched 2 products
+2024-10-23T11:12:48.609Z info: Fetched 2 products
+2024-10-23T11:28:25.014Z info: Product created: 85954b87-879e-4658-b163-7d9ca4c020af
+2024-10-23T11:28:25.015Z info: Product created: 85954b87-879e-4658-b163-7d9ca4c020af
+2024-10-23T11:28:31.476Z info: Fetched 3 products
+2024-10-23T11:28:31.476Z info: Fetched 3 products
+2024-10-23T11:30:08.021Z info: Product created: 69d19e01-3c37-4544-ac3a-62dbbc98fc1b
+2024-10-23T11:30:08.022Z info: Product created: 69d19e01-3c37-4544-ac3a-62dbbc98fc1b
+2024-10-23T11:30:11.312Z info: Fetched 4 products
+2024-10-23T11:30:11.312Z info: Fetched 4 products
+2024-10-23T11:31:25.362Z info: Product created: 967cee54-a4e9-439e-8a85-99b8ca13999a
+2024-10-23T11:31:25.362Z info: Product created: 967cee54-a4e9-439e-8a85-99b8ca13999a
+2024-10-23T11:31:29.164Z info: Fetched 5 products
+2024-10-23T11:31:29.164Z info: Fetched 5 products
+2024-10-23T11:32:47.330Z info: Product created: 17315dd4-fb9b-4585-baff-10eb3c4438fe
+2024-10-23T11:32:47.331Z info: Product created: 17315dd4-fb9b-4585-baff-10eb3c4438fe
+2024-10-23T11:32:58.193Z info: Fetched 6 products
+2024-10-23T11:32:58.193Z info: Fetched 6 products
+2024-10-23T11:34:06.829Z error: Error creating product: 
+Invalid `prisma.product.create()` invocation in
+/home/sachi/Port_1/src/services/productService.js:32:45
+
+  29 const priceFloat = parseFloat(price);
+  30 const availabilityBool = Boolean(availability);
+  31 
+→ 32 const newProduct = await prisma.product.create({
+       data: {
+         name: "Maize",
+         price: 199,
+         availability: true,
+         description: "Fresh maize",
+         image: "/home/sachi/Port_1/uploads/a1af695802e9b8c6b5afdbab0f0b0808",
+         retailerId: "ff995516-1e62-4181-b666-d72d5fd34d14",
+         category: "Cereals"
+                   ~~~~~~~~~
+       }
+     })
+
+Invalid value for argument `category`. Expected ProductCategory.
+2024-10-23T11:34:06.829Z error: Error creating product: Error creating product
+2024-10-23T11:34:10.526Z error: Error creating product: 
+Invalid `prisma.product.create()` invocation in
+/home/sachi/Port_1/src/services/productService.js:32:45
+
+  29 const priceFloat = parseFloat(price);
+  30 const availabilityBool = Boolean(availability);
+  31 
+→ 32 const newProduct = await prisma.product.create({
+       data: {
+         name: "Maize",
+         price: 199,
+         availability: true,
+         description: "Fresh maize",
+         image: "/home/sachi/Port_1/uploads/ba4985391dbea98d150228420c8df568",
+         retailerId: "ff995516-1e62-4181-b666-d72d5fd34d14",
+         category: "Cereals"
+                   ~~~~~~~~~
+       }
+     })
+
+Invalid value for argument `category`. Expected ProductCategory.
+2024-10-23T11:34:10.527Z error: Error creating product: Error creating product
+2024-10-23T11:34:24.015Z error: Error creating product: 
+Invalid `prisma.product.create()` invocation in
+/home/sachi/Port_1/src/services/productService.js:32:45
+
+  29 const priceFloat = parseFloat(price);
+  30 const availabilityBool = Boolean(availability);
+  31 
+→ 32 const newProduct = await prisma.product.create({
+       data: {
+         name: "Maize",
+         price: 199,
+         availability: true,
+         description: "Fresh maize",
+         image: "/home/sachi/Port_1/uploads/de9f499c29a3ebb62c04e6be164bc55d",
+         retailerId: "ff995516-1e62-4181-b666-d72d5fd34d14",
+         category: "Cereals"
+                   ~~~~~~~~~
+       }
+     })
+
+Invalid value for argument `category`. Expected ProductCategory.
+2024-10-23T11:34:24.015Z error: Error creating product: Error creating product
+2024-10-23T11:34:24.867Z error: Error creating product: 
+Invalid `prisma.product.create()` invocation in
+/home/sachi/Port_1/src/services/productService.js:32:45
+
+  29 const priceFloat = parseFloat(price);
+  30 const availabilityBool = Boolean(availability);
+  31 
+→ 32 const newProduct = await prisma.product.create({
+       data: {
+         name: "Maize",
+         price: 199,
+         availability: true,
+         description: "Fresh maize",
+         image: "/home/sachi/Port_1/uploads/1341c431a468c6742a3d192cc6e3b62f",
+         retailerId: "ff995516-1e62-4181-b666-d72d5fd34d14",
+         category: "Cereals"
+                   ~~~~~~~~~
+       }
+     })
+
+Invalid value for argument `category`. Expected ProductCategory.
+2024-10-23T11:34:24.867Z error: Error creating product: Error creating product
+2024-10-23T11:34:25.121Z error: Error creating product: 
+Invalid `prisma.product.create()` invocation in
+/home/sachi/Port_1/src/services/productService.js:32:45
+
+  29 const priceFloat = parseFloat(price);
+  30 const availabilityBool = Boolean(availability);
+  31 
+→ 32 const newProduct = await prisma.product.create({
+       data: {
+         name: "Maize",
+         price: 199,
+         availability: true,
+         description: "Fresh maize",
+         image: "/home/sachi/Port_1/uploads/3325caabe1272129d266bd73a2d6cbb5",
+         retailerId: "ff995516-1e62-4181-b666-d72d5fd34d14",
+         category: "Cereals"
+                   ~~~~~~~~~
+       }
+     })
+
+Invalid value for argument `category`. Expected ProductCategory.
+2024-10-23T11:34:25.122Z error: Error creating product: Error creating product
+2024-10-23T11:34:25.312Z error: Error creating product: 
+Invalid `prisma.product.create()` invocation in
+/home/sachi/Port_1/src/services/productService.js:32:45
+
+  29 const priceFloat = parseFloat(price);
+  30 const availabilityBool = Boolean(availability);
+  31 
+→ 32 const newProduct = await prisma.product.create({
+       data: {
+         name: "Maize",
+         price: 199,
+         availability: true,
+         description: "Fresh maize",
+         image: "/home/sachi/Port_1/uploads/a84fe707f4aa08944ca3c75eb40dfc4f",
+         retailerId: "ff995516-1e62-4181-b666-d72d5fd34d14",
+         category: "Cereals"
+                   ~~~~~~~~~
+       }
+     })
+
+Invalid value for argument `category`. Expected ProductCategory.
+2024-10-23T11:34:25.313Z error: Error creating product: Error creating product
+2024-10-23T11:34:26.866Z error: Error creating product: 
+Invalid `prisma.product.create()` invocation in
+/home/sachi/Port_1/src/services/productService.js:32:45
+
+  29 const priceFloat = parseFloat(price);
+  30 const availabilityBool = Boolean(availability);
+  31 
+→ 32 const newProduct = await prisma.product.create({
+       data: {
+         name: "Maize",
+         price: 199,
+         availability: true,
+         description: "Fresh maize",
+         image: "/home/sachi/Port_1/uploads/2c26573aeab8d752714114c1bbdedf7f",
+         retailerId: "ff995516-1e62-4181-b666-d72d5fd34d14",
+         category: "Cereals"
+                   ~~~~~~~~~
+       }
+     })
+
+Invalid value for argument `category`. Expected ProductCategory.
+2024-10-23T11:34:26.866Z error: Error creating product: Error creating product
+2024-10-23T11:34:28.277Z error: Error creating product: 
+Invalid `prisma.product.create()` invocation in
+/home/sachi/Port_1/src/services/productService.js:32:45
+
+  29 const priceFloat = parseFloat(price);
+  30 const availabilityBool = Boolean(availability);
+  31 
+→ 32 const newProduct = await prisma.product.create({
+       data: {
+         name: "Maize",
+         price: 199,
+         availability: true,
+         description: "Fresh maize",
+         image: "/home/sachi/Port_1/uploads/6d17bc66245ed71f9d165d2299f6ba4c",
+         retailerId: "ff995516-1e62-4181-b666-d72d5fd34d14",
+         category: "Cereals"
+                   ~~~~~~~~~
+       }
+     })
+
+Invalid value for argument `category`. Expected ProductCategory.
+2024-10-23T11:34:28.277Z error: Error creating product: Error creating product
+2024-10-23T11:34:28.461Z error: Error creating product: 
+Invalid `prisma.product.create()` invocation in
+/home/sachi/Port_1/src/services/productService.js:32:45
+
+  29 const priceFloat = parseFloat(price);
+  30 const availabilityBool = Boolean(availability);
+  31 
+→ 32 const newProduct = await prisma.product.create({
+       data: {
+         name: "Maize",
+         price: 199,
+         availability: true,
+         description: "Fresh maize",
+         image: "/home/sachi/Port_1/uploads/cf21317770fea1f5d68769a5fcec6f10",
+         retailerId: "ff995516-1e62-4181-b666-d72d5fd34d14",
+         category: "Cereals"
+                   ~~~~~~~~~
+       }
+     })
+
+Invalid value for argument `category`. Expected ProductCategory.
+2024-10-23T11:34:28.464Z error: Error creating product: Error creating product
+2024-10-23T11:34:30.723Z info: Fetched 6 products
+2024-10-23T11:34:30.724Z info: Fetched 6 products
+2024-10-23T11:34:54.357Z info: Fetched 6 products
+2024-10-23T11:34:54.358Z info: Fetched 6 products
+2024-10-23T11:39:05.524Z info: Fetched 6 products
+2024-10-23T11:39:05.524Z info: Fetched 6 products
+2024-10-23T11:39:20.089Z info: Fetched 6 products
+2024-10-23T11:39:20.090Z info: Fetched 6 products
+2024-10-23T11:39:31.088Z info: Fetched 6 products
+2024-10-23T11:39:31.089Z info: Fetched 6 products
+2024-10-23T11:41:47.122Z info: Fetched 6 products
+2024-10-23T11:41:47.123Z info: Fetched 6 products
+2024-10-23T11:42:50.085Z info: Fetched 6 products
+2024-10-23T11:42:50.085Z info: Fetched 6 products
+2024-10-23T11:44:01.690Z info: Fetched 6 products
+2024-10-23T11:44:01.690Z info: Fetched 6 products
+2024-10-23T11:44:10.616Z info: Fetched 6 products
+2024-10-23T11:44:10.617Z info: Fetched 6 products
+2024-10-23T11:44:35.540Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-23T11:44:35.542Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-23T11:44:35.670Z info: Fetched 6 products
+2024-10-23T11:44:35.671Z info: Fetched 6 products
+2024-10-23T11:44:53.797Z info: Product permanently deleted: 967cee54-a4e9-439e-8a85-99b8ca13999a
+2024-10-23T11:44:53.798Z info: Product permanently deleted: 967cee54-a4e9-439e-8a85-99b8ca13999a
+2024-10-23T11:45:00.658Z info: Fetched 5 products
+2024-10-23T11:45:00.659Z info: Fetched 5 products
+2024-10-23T11:45:05.460Z info: Fetched 5 products
+2024-10-23T11:45:05.460Z info: Fetched 5 products
+2024-10-23T11:45:34.315Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-23T11:45:34.317Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-23T11:45:34.447Z info: Fetched 5 products
+2024-10-23T11:45:34.447Z info: Fetched 5 products
+2024-10-23T11:45:39.416Z info: Product permanently deleted: 85954b87-879e-4658-b163-7d9ca4c020af
+2024-10-23T11:45:39.416Z info: Product permanently deleted: 85954b87-879e-4658-b163-7d9ca4c020af
+2024-10-23T11:45:42.382Z info: Product permanently deleted: 69d19e01-3c37-4544-ac3a-62dbbc98fc1b
+2024-10-23T11:45:42.382Z info: Product permanently deleted: 69d19e01-3c37-4544-ac3a-62dbbc98fc1b
+2024-10-23T11:45:53.071Z info: Fetched 3 products
+2024-10-23T11:45:53.072Z info: Fetched 3 products
+2024-10-23T11:47:11.909Z info: Fetched 3 products
+2024-10-23T11:47:11.909Z info: Fetched 3 products
+2024-10-23T11:47:24.163Z info: Fetched 3 products
+2024-10-23T11:47:24.163Z info: Fetched 3 products
+2024-10-23T11:48:23.123Z info: Fetched 3 products
+2024-10-23T11:48:23.123Z info: Fetched 3 products
+2024-10-23T11:48:52.616Z info: Fetched 3 products
+2024-10-23T11:48:52.621Z info: Fetched 3 products
+2024-10-23T11:49:22.873Z info: Fetched 3 products
+2024-10-23T11:49:22.873Z info: Fetched 3 products
+2024-10-23T11:51:23.235Z info: Fetched 3 products
+2024-10-23T11:51:23.235Z info: Fetched 3 products
+2024-10-23T11:51:47.271Z info: Fetched 3 products
+2024-10-23T11:51:47.272Z info: Fetched 3 products
+2024-10-23T11:56:24.435Z info: Fetched 3 products
+2024-10-23T11:56:24.435Z info: Fetched 3 products
+2024-10-23T11:56:29.889Z info: Fetched 3 products
+2024-10-23T11:56:29.890Z info: Fetched 3 products
+2024-10-23T11:57:17.476Z info: Product created: 378314b5-331a-4013-9080-27ca8af1efc9
+2024-10-23T11:57:17.477Z info: Product created: 378314b5-331a-4013-9080-27ca8af1efc9
+2024-10-23T11:57:20.860Z info: Fetched 4 products
+2024-10-23T11:57:20.860Z info: Fetched 4 products
+2024-10-23T11:57:41.081Z info: Fetched 4 products
+2024-10-23T11:57:41.082Z info: Fetched 4 products
+2024-10-23T11:58:49.335Z info: Fetched 4 products
+2024-10-23T11:58:49.336Z info: Fetched 4 products
+2024-10-23T12:03:15.703Z info: Fetched 4 products
+2024-10-23T12:03:15.704Z info: Fetched 4 products
+2024-10-23T12:43:25.327Z info: Fetched 4 products
+2024-10-23T12:43:25.328Z info: Fetched 4 products
+2024-10-23T13:01:40.329Z info: Fetched 4 products
+2024-10-23T13:01:40.330Z info: Fetched 4 products
+2024-10-23T13:03:52.615Z info: Fetched 4 products
+2024-10-23T13:03:52.615Z info: Fetched 4 products
+2024-10-23T13:04:06.188Z info: Fetched 4 products
+2024-10-23T13:04:06.189Z info: Fetched 4 products
+2024-10-23T13:09:04.629Z info: Fetched 4 products
+2024-10-23T13:09:04.630Z info: Fetched 4 products
+2024-10-23T13:09:07.818Z info: Fetched 4 products
+2024-10-23T13:09:07.818Z info: Fetched 4 products
+2024-10-23T13:09:18.468Z info: Fetched 4 products
+2024-10-23T13:09:18.468Z info: Fetched 4 products
+2024-10-23T13:09:21.232Z info: Fetched 4 products
+2024-10-23T13:09:21.233Z info: Fetched 4 products
+2024-10-23T13:09:24.468Z info: Fetched 4 products
+2024-10-23T13:09:24.468Z info: Fetched 4 products
+2024-10-23T13:09:25.841Z info: Fetched 4 products
+2024-10-23T13:09:25.841Z info: Fetched 4 products
+2024-10-23T13:09:28.767Z info: Fetched 4 products
+2024-10-23T13:09:28.768Z info: Fetched 4 products
+2024-10-23T13:09:30.858Z info: Fetched 4 products
+2024-10-23T13:09:30.858Z info: Fetched 4 products
+2024-10-23T13:09:33.757Z info: Fetched 4 products
+2024-10-23T13:09:33.758Z info: Fetched 4 products
+2024-10-23T13:09:35.290Z info: Fetched 4 products
+2024-10-23T13:09:35.292Z info: Fetched 4 products
+2024-10-23T14:05:35.466Z info: Fetched 4 products
+2024-10-23T14:05:35.472Z info: Fetched 4 products
+2024-10-23T14:14:03.404Z info: Fetched 4 products
+2024-10-23T14:14:03.405Z info: Fetched 4 products
+2024-10-23T14:18:48.938Z info: Fetched 4 products
+2024-10-23T14:18:48.939Z info: Fetched 4 products
+2024-10-23T14:22:08.137Z info: Fetched 4 products
+2024-10-23T14:22:08.138Z info: Fetched 4 products
+2024-10-23T14:25:43.628Z info: Fetched 4 products
+2024-10-23T14:25:43.630Z info: Fetched 4 products
+2024-10-23T14:26:06.514Z info: Fetched 4 products
+2024-10-23T14:26:06.516Z info: Fetched 4 products
+2024-10-23T14:26:33.259Z info: Fetched 4 products
+2024-10-23T14:26:33.259Z info: Fetched 4 products
+2024-10-23T14:26:41.359Z info: Fetched 4 products
+2024-10-23T14:26:41.359Z info: Fetched 4 products
+2024-10-23T14:26:56.290Z info: Fetched 4 products
+2024-10-23T14:26:56.290Z info: Fetched 4 products
+2024-10-23T14:33:39.465Z info: Fetched 4 products
+2024-10-23T14:33:39.466Z info: Fetched 4 products
+2024-10-23T14:34:22.201Z info: Fetched 4 products
+2024-10-23T14:34:22.201Z info: Fetched 4 products
+2024-10-23T14:40:22.120Z info: Fetched 4 products
+2024-10-23T14:40:22.120Z info: Fetched 4 products
+2024-10-23T14:41:11.791Z info: Fetched 4 products
+2024-10-23T14:41:11.791Z info: Fetched 4 products
+2024-10-23T14:41:30.869Z info: Fetched 4 products
+2024-10-23T14:41:30.869Z info: Fetched 4 products
+2024-10-23T14:42:02.331Z info: Fetched 4 products
+2024-10-23T14:42:02.331Z info: Fetched 4 products
+2024-10-23T14:44:02.374Z info: Fetched 4 products
+2024-10-23T14:44:02.374Z info: Fetched 4 products
+2024-10-23T14:44:46.968Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-23T14:44:46.971Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-23T14:44:47.097Z info: Fetched 4 products
+2024-10-23T14:44:47.098Z info: Fetched 4 products
+2024-10-23T14:44:57.453Z info: Fetched 4 products
+2024-10-23T14:44:57.453Z info: Fetched 4 products
+2024-10-23T14:52:35.401Z info: Fetched 4 products
+2024-10-23T14:52:35.401Z info: Fetched 4 products
+2024-10-23T14:54:50.872Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T14:59:45.507Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:05:58.097Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:06:18.682Z info: Fetched 4 products
+2024-10-23T15:06:18.682Z info: Fetched 4 products
+2024-10-23T15:07:19.114Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:10:20.301Z info: Fetched 4 products
+2024-10-23T15:10:20.301Z info: Fetched 4 products
+2024-10-23T15:10:59.323Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:12:21.238Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:24:27.634Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:25:36.182Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:29:50.632Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:38:27.535Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:38:37.449Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:38:40.992Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:39:39.049Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:39:42.552Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:39:47.785Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:40:15.392Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:40:18.383Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:40:27.260Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:40:53.919Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:40:55.777Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:42:46.517Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:43:54.271Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:51:33.850Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:51:35.711Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:51:46.145Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:51:48.814Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T15:53:31.996Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T15:53:33.341Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T15:53:43.981Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-23T15:53:43.986Z info: Retailer logged in: ff995516-1e62-4181-b666-d72d5fd34d14
+2024-10-23T15:53:55.910Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "John Doe",
+         email: "john.doe@example.com",
+         password: "$2b$10$2oz9T8PqheefHSMvRgL4sO3igsu2VA1j54URT8RDx4k5ckwRCeLza",
+         farmName: "Doe Farm",
+         location: "123 Farm Lane",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T15:53:55.910Z error: Error creating retailer: Error creating retailer
+2024-10-23T15:54:07.147Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "nicarsachi",
+         email: "abccde@gmail.com",
+         password: "$2b$10$oBw7xlYYVYld9LA1V9UqO.LM8qT9zd3eJFwL04RdkP3D0d6.YFt36",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T15:54:07.148Z error: Error creating retailer: Error creating retailer
+2024-10-23T15:55:53.174Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "nicarsachi",
+         email: "abccde@gmail.com",
+         password: "$2b$10$b8Nar/JSyuJ5b/RidH624utmdNqBzrWR7kqxhB/k38CBIQgIm9KMW",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T15:55:53.176Z error: Error creating retailer: Error creating retailer
+2024-10-23T15:56:36.026Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "nicarsachi",
+         email: "abccde@gmail.com",
+         password: "$2b$10$umcZgXc21rjb4CcJLllJ1eoldXsQDTjK4/EjzZsuLlSMCdRIf4N1C",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T15:56:36.029Z error: Error creating retailer: Error creating retailer
+2024-10-23T15:59:26.223Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "nicarsachi",
+         email: "abccde@gmail.com",
+         password: "$2b$10$3g/mfsDLQ8NRJ.QQpAn2T.8bXb77V1nbvepcFhjExAv.qvq0sFtiW",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T15:59:26.225Z error: Error creating retailer: Error creating retailer
+2024-10-23T16:01:22.375Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "nicarsachi",
+         email: "abccde@gmail.com",
+         password: "$2b$10$lisgSbHJX/TBps0.CyrTgepY2oejFYlPrfu81uwa8qoQTkP2SBI1i",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:01:22.376Z error: Error creating retailer: Error creating retailer
+2024-10-23T16:01:53.116Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "nicarsachi",
+         email: "abccde@gmail.com",
+         password: "$2b$10$VlmxCKIgAbGo92GJTBE6KOloe47McrxtGbCsftsWk7FCicHxWFnfS",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:01:53.118Z error: Error creating retailer: Error creating retailer
+2024-10-23T16:02:42.689Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "John Doe",
+         email: "john.doe@example.com",
+         password: "$2b$10$xS29dcEn4X6y7AVibdKGZ.FB9kIx9r8Ph7bhS3jvq3EmGtmN4UWYS",
+         farmName: "Doe Farm",
+         location: "123 Farm Lane",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:02:42.689Z error: Error creating retailer: Error creating retailer
+2024-10-23T16:06:54.297Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "nicarsachi",
+         email: "abccde@gmail.com",
+         password: "$2b$10$8bVr9iLVtSiH46AINCgvs.niV1qQWtuecdukuAhRPjfWmYT0x/rQm",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:06:54.298Z error: Error creating retailer: Error creating retailer
+2024-10-23T16:09:23.848Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "nicarsachi",
+         email: "abccde@gmail.com",
+         password: "$2b$10$RkZ780u.lbgctiG0VtCeJOJcjn2qo68VjBzRqjo6dDQgqsKO/PMqG",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:09:23.849Z error: Error creating retailer: Error creating retailer
+2024-10-23T16:11:18.998Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "nicarsachi",
+         email: "abccde@gmail.com",
+         password: "$2b$10$zXMS1TdmZ96v2OB/DwOAYO9YIlElnBnwPJ0XOVu.si0G1rzepc/OO",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:11:18.999Z error: Error creating retailer: Error creating retailer
+2024-10-23T16:11:46.459Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "nicarsachi",
+         email: "abccde@gmail.com",
+         password: "$2b$10$Wpan8zWFIDda2leyZOG/M.AMqZhETupL1uI2GzuQ32jyt5aG6mH4a",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:11:46.459Z error: Error creating retailer: Error creating retailer
+2024-10-23T16:11:47.424Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "nicarsachi",
+         email: "abccde@gmail.com",
+         password: "$2b$10$fWLb78YxF9f6zE69GOw70ugSqXYzL9tjEStoB4kQVtun5BToPmCxW",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:11:47.425Z error: Error creating retailer: Error creating retailer
+2024-10-23T16:12:35.517Z error: Error creating retailer: Cannot read properties of undefined (reading 'path')
+2024-10-23T16:13:11.986Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "nicarsachi",
+         email: "abccde@gmail.com",
+         password: "$2b$10$tlIqQK0z.JtgIcN0wmIuhuNUN7FFb4EmD/LoMNz5wJ3f/DkTrBqXW",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:13:11.989Z error: Error creating retailer: Error creating retailer
+2024-10-23T16:17:00.952Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "Sharon",
+         email: "sharonsachi@gmail.com",
+         password: "$2b$10$XIZlasRwy.0SmLOBO7aR8.Fnat0jcw88SDxtbwnm.j6INnQpFf/sy",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:17:00.952Z error: Error creating retailer: Error creating retailer
+2024-10-23T16:17:48.548Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "Sharon",
+         email: "sharonsachi@gmail.com",
+         password: "$2b$10$ltbmRbWMCx300uKbiGhjx.hb70GEssnOvx67PynLrgLRvbkcb/TTS",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:17:48.549Z error: Error creating retailer: Error creating retailer
+2024-10-23T16:22:04.970Z error: Error creating retailer: Validation error: "name" is required
+2024-10-23T16:22:42.437Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "Sharon",
+         email: "sharonsachi@gmail.com",
+         password: "$2b$10$OPSzCIfMgGunxmZhxh8dz.UBdIfciQ3P1LSu1NVLPsCCzSZjtqliS",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:22:42.437Z error: Error creating retailer: Error creating retailer
+2024-10-23T16:25:14.313Z info: Admin created: 9b56b9e8-5b2b-431c-8e82-c8b4582502a4
+2024-10-23T16:25:14.314Z info: Admin created: 9b56b9e8-5b2b-431c-8e82-c8b4582502a4
+2024-10-23T16:26:22.900Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T16:26:25.302Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T16:26:25.469Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T16:26:27.287Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T16:27:47.371Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "Sharon",
+         email: "sharonsachi@gmail.com",
+         password: "$2b$10$ymeviTUTpwfTAeFHoWNKV.rUHZrjB.RI2zHbVZNWwNLTjZSaTDbQm",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:27:47.373Z error: Error creating retailer: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "Sharon",
+         email: "sharonsachi@gmail.com",
+         password: "$2b$10$ymeviTUTpwfTAeFHoWNKV.rUHZrjB.RI2zHbVZNWwNLTjZSaTDbQm",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:33:00.971Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "Sharon",
+         email: "sharonsachi@gmail.com",
+         password: "$2b$10$uzQNGRw4HSCT.8WM0pLdoevndTFpcwSeKVaWK3ZVQy5vrQ1vCynYi",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:33:00.972Z error: Error creating retailer: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "Sharon",
+         email: "sharonsachi@gmail.com",
+         password: "$2b$10$uzQNGRw4HSCT.8WM0pLdoevndTFpcwSeKVaWK3ZVQy5vrQ1vCynYi",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:33:09.456Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "Sharon",
+         email: "sharonsachi@gmail.com",
+         password: "$2b$10$tYwb2gxhsc8nqkIjU/6rXu9jjJBzastwqR03JR15vmH4J0TzzZZWy",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:33:09.457Z error: Error creating retailer: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "Sharon",
+         email: "sharonsachi@gmail.com",
+         password: "$2b$10$tYwb2gxhsc8nqkIjU/6rXu9jjJBzastwqR03JR15vmH4J0TzzZZWy",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:33:10.656Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "Sharon",
+         email: "sharonsachi@gmail.com",
+         password: "$2b$10$sNbnjA2ojAUvXehkU/Dr7euO25Ac0sDNkOhyiA0kIYAAgtT5nzTRO",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:33:10.657Z error: Error creating retailer: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "Sharon",
+         email: "sharonsachi@gmail.com",
+         password: "$2b$10$sNbnjA2ojAUvXehkU/Dr7euO25Ac0sDNkOhyiA0kIYAAgtT5nzTRO",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:33:42.411Z error: Error creating retailer: Validation error: "name" is required
+2024-10-23T16:34:00.245Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "Sharon",
+         email: "sharonsachi@gmail.com",
+         password: "$2b$10$4AVLMh6CV47dETZQKoFk.OE5.R2TtRHtO5B/I5d2k81.Hf.5/XIqC",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:34:00.245Z error: Error creating retailer: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "Sharon",
+         email: "sharonsachi@gmail.com",
+         password: "$2b$10$4AVLMh6CV47dETZQKoFk.OE5.R2TtRHtO5B/I5d2k81.Hf.5/XIqC",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:37:52.047Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "Sharon",
+         email: "sharonsachi@gmail.com",
+         password: "$2b$10$uAJMJGCB0fU8UhTQY/lu/eBba5v1D38ty1EzIpPgrw9yAZ9Km.4ES",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:37:52.048Z error: Error creating retailer: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create({
+       data: {
+         name: "Sharon",
+         email: "sharonsachi@gmail.com",
+         password: "$2b$10$uAJMJGCB0fU8UhTQY/lu/eBba5v1D38ty1EzIpPgrw9yAZ9Km.4ES",
+         farmName: "Qweer",
+         location: "Embu",
+     +   profileImage: String
+       }
+     })
+
+Argument `profileImage` is missing.
+2024-10-23T16:42:42.672Z info: Retailer created: d9fb9e09-6128-4c96-a7bc-ddf5321e471b
+2024-10-23T16:42:42.676Z info: Retailer created: d9fb9e09-6128-4c96-a7bc-ddf5321e471b
+2024-10-23T16:45:36.228Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T16:45:40.901Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T16:45:41.218Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T16:48:17.744Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create(
+Unique constraint failed on the constraint: `Retailer_email_key`
+2024-10-23T16:48:17.748Z error: Error creating retailer: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create(
+Unique constraint failed on the constraint: `Retailer_email_key`
+2024-10-23T16:49:11.903Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create(
+Unique constraint failed on the constraint: `Retailer_email_key`
+2024-10-23T16:49:11.908Z error: Error creating retailer: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create(
+Unique constraint failed on the constraint: `Retailer_email_key`
+2024-10-23T16:49:15.934Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create(
+Unique constraint failed on the constraint: `Retailer_email_key`
+2024-10-23T16:49:15.935Z error: Error creating retailer: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create(
+Unique constraint failed on the constraint: `Retailer_email_key`
+2024-10-23T16:49:20.410Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create(
+Unique constraint failed on the constraint: `Retailer_email_key`
+2024-10-23T16:49:20.411Z error: Error creating retailer: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create(
+Unique constraint failed on the constraint: `Retailer_email_key`
+2024-10-23T16:51:16.252Z error: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create(
+Unique constraint failed on the constraint: `Retailer_email_key`
+2024-10-23T16:51:16.259Z error: Error creating retailer: Error creating retailer: 
+Invalid `prisma.retailer.create()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:39:47
+
+  36 // Hash the password before saving
+  37 const hashedPassword = await hashPassword(password);
+  38 
+→ 39 const newRetailer = await prisma.retailer.create(
+Unique constraint failed on the constraint: `Retailer_email_key`
+2024-10-23T16:51:46.587Z error: Error creating retailer: Validation error: "email" must be a valid email
+2024-10-23T16:52:06.695Z info: Retailer created: aba76cde-43fc-4031-9a17-f82e3a556334
+2024-10-23T16:52:06.695Z info: Retailer created: aba76cde-43fc-4031-9a17-f82e3a556334
+2024-10-23T16:52:45.511Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T16:53:28.098Z info: Retailer created: 8b76a0b0-ccc7-4a6f-b4ba-2e91acc53d2a
+2024-10-23T16:53:28.103Z info: Retailer created: 8b76a0b0-ccc7-4a6f-b4ba-2e91acc53d2a
+2024-10-23T16:53:46.189Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T16:53:50.343Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T16:59:41.289Z info: Fetched 4 products
+2024-10-23T16:59:41.298Z info: Fetched 4 products
+2024-10-23T17:00:34.222Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T17:04:03.761Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T17:11:31.226Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T17:12:03.906Z info: Retailer created: 141f8de8-9660-435d-a581-a991714e9fcb
+2024-10-23T17:12:03.908Z info: Retailer created: 141f8de8-9660-435d-a581-a991714e9fcb
+2024-10-23T17:13:58.964Z info: Fetched 4 products
+2024-10-23T17:13:58.965Z info: Fetched 4 products
+2024-10-23T17:14:54.656Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T17:29:55.526Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T17:30:26.599Z info: Retailer created: e4922f30-c7a5-466c-adac-f019737ce4a0
+2024-10-23T17:30:26.599Z info: Retailer created: e4922f30-c7a5-466c-adac-f019737ce4a0
+2024-10-23T17:31:02.829Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T19:15:47.586Z error: Error fetching products: 
+Invalid `prisma.product.findMany()` invocation in
+/home/sachi/Port_1/src/services/productService.js:54:43
+
+  51 // Function to get all products with pagination
+  52 async function getProducts(page = 1, limit = 10) {
+  53   try {
+→ 54     const products = await prisma.product.findMany(
+Error in connector: Error creating a database connection. (Kind: An error occurred during DNS resolution: no record found for Query { name: Name("_mongodb._tcp.mysoko.oywwa.mongodb.net."), query_type: SRV, query_class: IN }, labels: {})
+2024-10-23T19:15:47.586Z error: Error fetching products: Error fetching products
+2024-10-23T19:29:29.093Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T19:30:36.515Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T19:41:24.234Z info: Fetched 4 products
+2024-10-23T19:41:24.235Z info: Fetched 4 products
+2024-10-23T19:41:58.000Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T19:50:28.633Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T19:50:50.060Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T19:57:46.473Z error: Error creating retailer: Validation error: "location" is required
+2024-10-23T20:03:59.894Z info: Retailer created: 6d7206ad-5569-43b2-b39b-8f4d6e1e7dc3
+2024-10-23T20:03:59.894Z info: Retailer created: 6d7206ad-5569-43b2-b39b-8f4d6e1e7dc3
+2024-10-23T20:05:17.192Z error: Error creating retailer: Email already in use
+2024-10-23T20:05:17.192Z error: Error creating retailer: Error creating retailer: Email already in use
+2024-10-23T20:05:22.320Z error: Error creating retailer: Email already in use
+2024-10-23T20:05:22.320Z error: Error creating retailer: Error creating retailer: Email already in use
+2024-10-23T20:05:22.591Z error: Error creating retailer: Email already in use
+2024-10-23T20:05:22.591Z error: Error creating retailer: Error creating retailer: Email already in use
+2024-10-23T20:05:55.785Z info: Retailer created: 4283ce5a-8fc2-46b0-9009-3b9942e83693
+2024-10-23T20:05:55.787Z info: Retailer created: 4283ce5a-8fc2-46b0-9009-3b9942e83693
+2024-10-23T20:08:44.556Z error: Error creating retailer: Email already in use
+2024-10-23T20:08:44.557Z error: Error creating retailer: Error creating retailer: Email already in use
+2024-10-23T20:09:34.053Z info: Retailer created: 7c02a52c-b1fb-491b-84ea-a4d84886e903
+2024-10-23T20:09:34.053Z info: Retailer created: 7c02a52c-b1fb-491b-84ea-a4d84886e903
+2024-10-23T20:11:10.255Z info: Retailer created: b766b486-a220-465a-ac9b-f83d2b7b4184
+2024-10-23T20:11:10.256Z info: Retailer created: b766b486-a220-465a-ac9b-f83d2b7b4184
+2024-10-23T20:21:25.061Z info: Retailer created: 3e901a04-2ae3-445a-aba1-438f4ea90c0b
+2024-10-23T20:21:25.066Z info: Retailer created: 3e901a04-2ae3-445a-aba1-438f4ea90c0b
+2024-10-23T20:22:48.155Z info: Retailer created: 8b6c34e0-c708-4451-a468-15b3c20cc008
+2024-10-23T20:22:48.156Z info: Retailer created: 8b6c34e0-c708-4451-a468-15b3c20cc008
+2024-10-23T20:25:18.599Z info: Retailer created: 5232308f-f073-4d29-bc76-53e23e79471d
+2024-10-23T20:25:18.600Z info: Retailer created: 5232308f-f073-4d29-bc76-53e23e79471d
+2024-10-23T20:25:22.528Z error: Error creating retailer: Email already in use
+2024-10-23T20:25:22.530Z error: Error creating retailer: Error creating retailer: Email already in use
+2024-10-23T20:28:28.582Z info: Fetched 4 products
+2024-10-23T20:28:28.586Z info: Fetched 4 products
+2024-10-23T20:29:08.273Z info: Retailer created: 7ff19def-8ef0-4219-8233-7ec2eb925913
+2024-10-23T20:29:08.275Z info: Retailer created: 7ff19def-8ef0-4219-8233-7ec2eb925913
+2024-10-23T20:32:29.190Z info: Retailer created: 51a6105a-24fa-4fe3-a9d2-a04de70e3c6f
+2024-10-23T20:32:29.191Z info: Retailer created: 51a6105a-24fa-4fe3-a9d2-a04de70e3c6f
+2024-10-23T20:34:37.654Z error: Error creating retailer: Email already in use
+2024-10-23T20:34:37.655Z error: Error creating retailer: Error creating retailer: Email already in use
+2024-10-23T20:34:53.448Z info: Retailer created: 3cc25423-8529-44d1-84bf-4897624e53de
+2024-10-23T20:34:53.449Z info: Retailer created: 3cc25423-8529-44d1-84bf-4897624e53de
+2024-10-23T20:35:41.343Z info: Retailer created: c7db01f9-a6f5-47bf-9684-23f85b4a2f59
+2024-10-23T20:35:41.344Z info: Retailer created: c7db01f9-a6f5-47bf-9684-23f85b4a2f59
+2024-10-23T20:35:43.564Z info: Fetched 4 products
+2024-10-23T20:35:43.564Z info: Fetched 4 products
+2024-10-23T20:37:47.867Z info: Fetched 4 products
+2024-10-23T20:37:47.867Z info: Fetched 4 products
+2024-10-23T20:37:55.534Z info: Fetched 4 products
+2024-10-23T20:37:55.534Z info: Fetched 4 products
+2024-10-23T20:39:09.210Z info: Retailer created: 9b131498-d540-4def-bad7-5a83cc30d226
+2024-10-23T20:39:09.210Z info: Retailer created: 9b131498-d540-4def-bad7-5a83cc30d226
+2024-10-23T20:40:31.398Z info: Retailer created: aefd6fc5-881a-47d3-a43c-e5a31de3ab49
+2024-10-23T20:40:31.398Z info: Retailer created: aefd6fc5-881a-47d3-a43c-e5a31de3ab49
+2024-10-23T20:40:33.584Z info: Fetched 4 products
+2024-10-23T20:40:33.584Z info: Fetched 4 products
+2024-10-23T20:42:31.930Z info: Fetched 4 products
+2024-10-23T20:42:31.930Z info: Fetched 4 products
+2024-10-23T20:42:35.539Z info: Fetched 4 products
+2024-10-23T20:42:35.540Z info: Fetched 4 products
+2024-10-23T20:43:37.112Z info: Retailer created: bbcd52df-89f5-4cc0-af5e-829a0fc339c9
+2024-10-23T20:43:37.113Z info: Retailer created: bbcd52df-89f5-4cc0-af5e-829a0fc339c9
+2024-10-23T20:43:39.334Z info: Fetched 4 products
+2024-10-23T20:43:39.334Z info: Fetched 4 products
+2024-10-23T20:44:25.453Z info: Fetched 4 products
+2024-10-23T20:44:25.453Z info: Fetched 4 products
+2024-10-23T20:48:09.277Z info: Fetched 4 products
+2024-10-23T20:48:09.277Z info: Fetched 4 products
+2024-10-23T20:48:53.824Z error: Error logging in retailer: 
+Invalid `prisma.retailer.findUnique()` invocation in
+/home/sachi/Port_1/src/services/retailerService.js:75:44
+
+  72 }
+  73 
+  74 try {
+→ 75   const retailer = await prisma.retailer.findUnique(
+Error converting field "farmName" of expected non-nullable type "String", found incompatible value of "null".
+2024-10-23T20:48:53.824Z error: Error logging in retailer: Error logging in retailer
+2024-10-23T20:51:38.166Z info: Retailer logged in: e4922f30-c7a5-466c-adac-f019737ce4a0
+2024-10-23T20:51:38.168Z info: Retailer logged in: e4922f30-c7a5-466c-adac-f019737ce4a0
+2024-10-23T20:51:38.316Z info: Fetched 4 products
+2024-10-23T20:51:38.316Z info: Fetched 4 products
+2024-10-23T20:52:19.369Z info: Fetched 4 products
+2024-10-23T20:52:19.369Z info: Fetched 4 products
+2024-10-23T20:54:35.369Z info: Fetched 4 products
+2024-10-23T20:54:35.369Z info: Fetched 4 products
+2024-10-23T20:54:57.500Z info: Fetched 4 products
+2024-10-23T20:54:57.500Z info: Fetched 4 products
+2024-10-23T20:55:47.538Z info: Fetched 4 products
+2024-10-23T20:55:47.539Z info: Fetched 4 products
+2024-10-23T20:57:03.520Z error: Error verifying token: jwt malformed
+2024-10-23T20:57:38.864Z error: Error verifying token: jwt malformed
+2024-10-23T20:57:51.072Z info: Fetched 4 products
+2024-10-23T20:57:51.073Z info: Fetched 4 products
+2024-10-23T20:58:19.229Z error: Error verifying token: jwt malformed
+2024-10-23T20:58:22.759Z error: Error verifying token: jwt malformed
+2024-10-23T20:59:16.047Z info: Product created: b61d5a69-6dcd-455f-9a7f-dd3aa1b6164a
+2024-10-23T20:59:16.048Z info: Product created: b61d5a69-6dcd-455f-9a7f-dd3aa1b6164a
+2024-10-23T20:59:33.835Z info: Fetched 5 products
+2024-10-23T20:59:33.836Z info: Fetched 5 products
+2024-10-23T21:00:37.370Z info: Product created: 96f6a15e-dd60-47c7-886d-5e61d79b89d6
+2024-10-23T21:00:37.370Z info: Product created: 96f6a15e-dd60-47c7-886d-5e61d79b89d6
+2024-10-23T21:00:43.887Z info: Fetched 6 products
+2024-10-23T21:00:43.887Z info: Fetched 6 products
+2024-10-23T21:02:27.001Z info: Product created: d86e0bb4-7b1d-469d-bebc-cd1850af41c6
+2024-10-23T21:02:27.001Z info: Product created: d86e0bb4-7b1d-469d-bebc-cd1850af41c6
+2024-10-23T21:02:33.981Z info: Fetched 7 products
+2024-10-23T21:02:33.981Z info: Fetched 7 products
+2024-10-23T21:04:00.101Z info: Fetched 7 products
+2024-10-23T21:04:00.102Z info: Fetched 7 products
+2024-10-23T21:04:44.490Z info: Fetched 7 products
+2024-10-23T21:04:44.490Z info: Fetched 7 products
+2024-10-23T21:05:36.104Z info: Fetched 2 orders
+2024-10-23T21:05:36.104Z info: Fetched 2 orders
+2024-10-23T21:06:23.793Z info: Fetched 7 products
+2024-10-23T21:06:23.793Z info: Fetched 7 products
+2024-10-23T21:07:01.372Z info: Fetched 7 products
+2024-10-23T21:07:01.373Z info: Fetched 7 products
+2024-10-23T21:16:20.036Z info: Fetched 7 products
+2024-10-23T21:16:20.037Z info: Fetched 7 products
+2024-10-23T21:16:45.496Z info: Fetched 7 products
+2024-10-23T21:16:45.496Z info: Fetched 7 products

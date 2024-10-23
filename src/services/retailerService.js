@@ -7,12 +7,13 @@ const {
   verifyPassword,
 } = require('../utils/hashPassword');
 
-// Validation schema
+// Validation schema for retailer
 const retailerSchema = Joi.object({
   name: Joi.string().required(),
   email: Joi.string().email().required(),
   password: Joi.string().required(),
-  profileImage: Joi.string().required(),
+  farmName: Joi.string().required(),
+  location: Joi.string().required(),
 });
 
 // Validation schema for login
@@ -29,8 +30,19 @@ async function createRetailer(retailer) {
   }
 
   try {
+    // Check if retailer with the same email already exists
+    const existingRetailer = await prisma.retailer.findUnique({
+      where: {
+        email: retailer.email,
+      },
+    });
+
+    if (existingRetailer) {
+      throw new Error('Email already in use');
+    }
+
     // Extract individual fields
-    const { name, email, password, profileImage } = retailer;
+    const { name, email, password, farmName, location } = retailer;
 
     // Hash the password before saving
     const hashedPassword = await hashPassword(password);
@@ -40,14 +52,15 @@ async function createRetailer(retailer) {
         name,
         email,
         password: hashedPassword,
-        profileImage,
+        farmName,
+        location,
       },
     });
     logger.info(`Retailer created: ${newRetailer.id}`);
     return newRetailer;
   } catch (err) {
     logger.error(`Error creating retailer: ${err.message}`);
-    throw new Error('Error creating retailer');
+    throw new Error(`Error creating retailer: ${err.message}`);
   }
 }
 
@@ -149,7 +162,8 @@ async function updateRetailer(id, retailer) {
         name: retailer.name,
         email: retailer.email,
         password: retailer.password,
-        profileImage: retailer.profileImage,
+        farmName: retailer.farmName,
+        location: retailer.location,
       },
     });
     logger.info(`Retailer updated: ${updatedRetailer.id}`);
@@ -205,6 +219,33 @@ async function permanentlyDeleteRetailer(id) {
   }
 }
 
+// Function to get all products with pagination
+async function getProducts(page = 1, limit = 10) {
+  try {
+    const products = await prisma.product.findMany({
+      skip: (page - 1) * limit,
+      take: limit,
+    });
+    logger.info(`Fetched ${products.length} products`);
+    return products;
+  } catch (err) {
+    logger.error(`Error fetching products: ${err.message}`);
+    throw new Error('Error fetching products');
+  }
+}
+
+// Function to get all products without pagination
+async function getAllProducts() {
+  try {
+    const products = await prisma.product.findMany();
+    logger.info(`Fetched ${products.length} products`);
+    return products;
+  } catch (err) {
+    logger.error(`Error fetching products: ${err.message}`);
+    throw new Error('Error fetching products');
+  }
+}
+
 module.exports = {
   createRetailer,
   loginRetailer,
@@ -213,4 +254,6 @@ module.exports = {
   updateRetailer,
   deleteRetailer,
   permanentlyDeleteRetailer,
+  getProducts,
+  getAllProducts,
 };

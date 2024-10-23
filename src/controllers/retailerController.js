@@ -13,16 +13,15 @@ const paginationSchema = Joi.object({
 // Function to create a new retailer
 async function createRetailer(req, res) {
   try {
-    // Add the file path to the request body
-    req.body.profileImage = req.file.path;
-
     const retailer = await retailerService.createRetailer(req.body);
     logger.info(`Retailer created: ${retailer.id}`);
+    const accessToken = generateToken({ id: retailer.id });
     res.status(201).json({
       statusCode: 201,
       message: 'Retailer created successfully',
       status: 'success',
-      data: retailer
+      data: retailer,
+      accessToken: accessToken
     });
   } catch (error) {
     logger.error(`Error creating retailer: ${error.message}`);
@@ -54,7 +53,8 @@ async function loginRetailer(req, res) {
           id: retailer.id,
           name: retailer.name,
           email: retailer.email,
-          profileImage: retailer.profileImage,
+          farmName: retailer.farmName,
+          location: retailer.location,
         },
       },
     });
@@ -153,11 +153,6 @@ async function updateRetailer(req, res) {
         status: 'error',
         error: error.message
       });
-    }
-
-    // Add the file path to the request body
-    if (req.file) {
-      req.body.profileImage = req.file.path;
     }
 
     const retailer = await retailerService.updateRetailer(req.params.id, req.body);

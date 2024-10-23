@@ -26,7 +26,8 @@ model Retailer {
   name                String
   email               String          @unique
   password            String
-  profileImage        String
+  farmName            String
+  location            String
   products            Product[]
   createdAt           DateTime        @default(now())
   updatedAt           DateTime        @updatedAt
