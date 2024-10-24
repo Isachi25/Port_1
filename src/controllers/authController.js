@@ -15,6 +15,7 @@ const paginationSchema = Joi.object({
 
 // Function to create a new user (admin or retailer)
 async function createUser(req, res) {
+  console.log(req.body);
   try {
     const role = req.body.role;
     let schema;
