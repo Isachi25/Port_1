@@ -4,7 +4,6 @@ const { generateToken } = require('../utils/hashPassword');
 
 // Function to create a new user (admin or retailer)
 async function createUser(req, res) {
-  console.log(req.body);
   try {
     const user = await authService.createUser(req.body);
     logger.info(`User created: ${user.id}`);

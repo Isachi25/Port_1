@@ -30,7 +30,6 @@ const loginSchema = Joi.object({
 
 // Function to create a new user (admin or retailer)
 async function createUser(user) {
-  console.log('Creating user', user);
   let schema;
   if (user.role === 'admin') {
     schema = adminSchema;
