@@ -1857,3 +1857,27 @@ Error converting field "farmName" of expected non-nullable type "String", found 
 2024-10-24T11:05:03.273Z info: User created: a9fb6fe5-da2c-42f7-af76-7957922c801b
 2024-10-24T11:05:06.133Z info: Fetched 0 products
 2024-10-24T11:05:06.134Z info: Fetched 0 products
+2024-10-24T11:08:36.967Z info: Fetched 0 products
+2024-10-24T11:08:36.974Z info: Fetched 0 products
+2024-10-24T11:18:10.008Z info: Fetched 0 products
+2024-10-24T11:18:10.008Z info: Fetched 0 products
+2024-10-24T11:19:57.808Z info: Fetched 0 products
+2024-10-24T11:19:57.809Z info: Fetched 0 products
+2024-10-24T11:20:13.005Z info: Fetched 0 products
+2024-10-24T11:20:13.006Z info: Fetched 0 products
+2024-10-24T11:21:09.509Z error: Error creating user: Validation error: "farmName" is not allowed
+2024-10-24T11:23:19.313Z error: Error creating user: Validation error: "farmName" is not allowed
+2024-10-24T11:26:38.288Z info: User created: 8d75d76a-0309-49db-af41-2d2b5f97b27a
+2024-10-24T11:26:38.292Z info: User created: 8d75d76a-0309-49db-af41-2d2b5f97b27a
+2024-10-24T11:26:41.188Z info: Fetched 0 products
+2024-10-24T11:26:41.190Z info: Fetched 0 products
+2024-10-24T11:28:08.330Z info: Fetched 0 products
+2024-10-24T11:28:08.333Z info: Fetched 0 products
+2024-10-24T11:29:30.990Z info: User created: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:29:30.991Z info: User created: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:29:33.191Z info: Fetched 0 products
+2024-10-24T11:29:33.191Z info: Fetched 0 products
+2024-10-24T11:29:48.510Z info: Fetched 0 products
+2024-10-24T11:29:48.511Z info: Fetched 0 products
+2024-10-24T11:30:05.193Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:30:05.195Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef

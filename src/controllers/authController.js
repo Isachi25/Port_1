@@ -5,7 +5,15 @@ const { generateToken } = require('../utils/hashPassword');
 // Function to create a new user (admin or retailer)
 async function createUser(req, res) {
   try {
-    const user = await authService.createUser(req.body);
+    let user = { ...req.body };
+
+    // Remove farmName and location if the role is admin
+    if (user.role === 'admin') {
+      delete user.farmName;
+      delete user.location;
+    }
+
+    user = await authService.createUser(user);
     logger.info(`User created: ${user.id}`);
     const accessToken = generateToken({ id: user.id });
     res.status(201).json({
