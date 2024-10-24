@@ -43,8 +43,10 @@ async function createUser(user, schema) {
       },
     });
 
+    console.log(existingUser);
+
     if (existingUser) {
-      throw new Error('Email already in use');
+      throw new Error('User with the same email already exists');
     }
 
     // Extract individual fields
