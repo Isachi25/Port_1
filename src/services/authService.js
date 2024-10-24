@@ -37,17 +37,17 @@ async function createUser(user, schema) {
 
   try {
     // Check if user with the same email already exists
-    const existingUser = await prisma.user.findUnique({
-      where: {
-        email: user.email,
-      },
-    });
+    // const existingUser = await prisma.user.findUnique({
+    //   where: {
+    //     email: user.email,
+    //   },
+    // });
 
-    console.log(existingUser);
+    // console.log(existingUser);
 
-    if (existingUser) {
-      throw new Error('User with the same email already exists');
-    }
+    // if (existingUser) {
+    //   throw new Error('User with the same email already exists');
+    // }
 
     // Extract individual fields
     const { name, email, password, farmName, location, role } = user;
