@@ -31,6 +31,54 @@ async function createOrder(req, res) {
   }
 }
 
+// Function to update order
+async function updateOrder(req, res) {
+  try {
+    const { error } = idSchema.validate(req.params.id);
+    if (error) {
+      return res.status(400).json({
+        statusCode: 400,
+        message: 'Bad request',
+        status: 'error',
+        error: error.message
+      });
+    }
+
+    const order = await orderService.updateOrder(req.params.id, req.body);
+    logger.info(`Order updated: ${order.id}`);
+    res.status(200).json({
+      statusCode: 200,
+      message: 'Order updated successfully',
+      status: 'success',
+      data: order
+    });
+  } catch (error) {
+    if (error.message === 'Order not found') {
+      res.status(404).json({
+        statusCode: 404,
+        message: 'Order not found',
+        status: 'error',
+        error: error.message
+      });
+    } else if (error.message.startsWith('Validation error')) {
+      res.status(400).json({
+        statusCode: 400,
+        message: 'Bad request',
+        status: 'error',
+        error: error.message
+      });
+    } else {
+      logger.error(`Error updating order: ${error.message}`);
+      res.status(500).json({
+        statusCode: 500,
+        message: 'Internal server error',
+        status: 'error',
+        error: error.message
+      });
+    }
+  }
+}
+
 // Function to get all orders with pagination
 async function getOrders (req, res) {
   try {
@@ -101,54 +149,6 @@ async function getOrderById (req, res) {
       status: 'error',
       error: error.message
     });
-  }
-}
-
-// Function to update order
-async function updateOrder(req, res) {
-  try {
-    const { error } = idSchema.validate(req.params.id);
-    if (error) {
-      return res.status(400).json({
-        statusCode: 400,
-        message: 'Bad request',
-        status: 'error',
-        error: error.message
-      });
-    }
-
-    const order = await orderService.updateOrder(req.params.id, req.body);
-    logger.info(`Order updated: ${order.id}`);
-    res.status(200).json({
-      statusCode: 200,
-      message: 'Order updated successfully',
-      status: 'success',
-      data: order
-    });
-  } catch (error) {
-    if (error.message === 'Order not found') {
-      res.status(404).json({
-        statusCode: 404,
-        message: 'Order not found',
-        status: 'error',
-        error: error.message
-      });
-    } else if (error.message.startsWith('Validation error')) {
-      res.status(400).json({
-        statusCode: 400,
-        message: 'Bad request',
-        status: 'error',
-        error: error.message
-      });
-    } else {
-      logger.error(`Error updating order: ${error.message}`);
-      res.status(500).json({
-        statusCode: 500,
-        message: 'Internal server error',
-        status: 'error',
-        error: error.message
-      });
-    }
   }
 }
 

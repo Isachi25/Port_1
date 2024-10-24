@@ -49,7 +49,12 @@ async function createOrder(order) {
 
   try {
     const newOrder = await prisma.order.create({
-      data: order
+      data: {
+        ...order,
+        product: {
+          connect: { id: order.productId }
+        }
+      }
     });
     logger.info(`Order created: ${newOrder.id}`);
 
@@ -60,6 +65,52 @@ async function createOrder(order) {
   } catch (err) {
     logger.error(`Error creating order: ${err.message}`);
     throw new Error('Error creating order');
+  }
+}
+
+// Function to update order
+async function updateOrder(id, order) {
+  const { error } = orderSchema.validate(order);
+  if (error) {
+    throw new Error(`Validation error: ${error.details[0].message}`);
+  }
+
+  try {
+    // Check if order exists
+    const existingOrder = await prisma.order.findUnique({
+      where: {
+        id
+      }
+    });
+
+    if (!existingOrder || existingOrder.deletedAt) {
+      throw new Error('Order not found');
+    }
+
+    // Extract individual fields
+    const { productId, clientName, phoneNumber, email, address, status } = order;
+
+    const updatedOrder = await prisma.order.update({
+      where: {
+        id
+      },
+      data: {
+        productId,
+        clientName,
+        phoneNumber,
+        email,
+        address,
+        status,
+        product: {
+          connect: { id: productId }
+        }
+      }
+    });
+    logger.info(`Order updated: ${updatedOrder.id}`);
+    return updatedOrder;
+  } catch (err) {
+    logger.error(`Error updating order: ${err.message}`);
+    throw new Error('Error updating order');
   }
 }
 
@@ -103,49 +154,6 @@ async function getOrderById (id) {
   } catch (err) {
     logger.error(`Error fetching order: ${err.message}`);
     throw new Error('Error fetching order');
-  }
-}
-
-// Function to update order
-async function updateOrder(id, order) {
-  const { error } = orderSchema.validate(order);
-  if (error) {
-    throw new Error(`Validation error: ${error.details[0].message}`);
-  }
-
-  try {
-    // Check if order exists
-    const existingOrder = await prisma.order.findUnique({
-      where: {
-        id
-      }
-    });
-
-    if (!existingOrder || existingOrder.deletedAt) {
-      throw new Error('Order not found');
-    }
-
-    // Extract individual fields
-    const { productId, clientName, phoneNumber, email, address, status } = order;
-
-    const updatedOrder = await prisma.order.update({
-      where: {
-        id
-      },
-      data: {
-        productId,
-        clientName,
-        phoneNumber,
-        email,
-        address,
-        status
-      }
-    });
-    logger.info(`Order updated: ${updatedOrder.id}`);
-    return updatedOrder;
-  } catch (err) {
-    logger.error(`Error updating order: ${err.message}`);
-    throw new Error('Error updating order');
   }
 }
 

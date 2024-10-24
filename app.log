@@ -1905,3 +1905,83 @@ Error converting field "farmName" of expected non-nullable type "String", found 
 2024-10-24T11:46:27.731Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
 2024-10-24T11:46:53.793Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
 2024-10-24T11:46:53.795Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:51:21.676Z info: Fetched 0 products
+2024-10-24T11:51:21.685Z info: Fetched 0 products
+2024-10-24T11:51:36.286Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:51:36.328Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:52:29.463Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:52:29.466Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:53:48.441Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:53:48.442Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:54:58.721Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:54:58.722Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:54:58.882Z info: Fetched 0 products
+2024-10-24T11:54:58.883Z info: Fetched 0 products
+2024-10-24T11:55:03.873Z info: Fetched 0 products
+2024-10-24T11:55:03.874Z info: Fetched 0 products
+2024-10-24T11:55:10.164Z info: Fetched 0 products
+2024-10-24T11:55:10.165Z info: Fetched 0 products
+2024-10-24T11:55:21.358Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:55:21.360Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:55:21.478Z info: Fetched 0 products
+2024-10-24T11:55:21.478Z info: Fetched 0 products
+2024-10-24T11:55:31.309Z info: Fetched 0 products
+2024-10-24T11:55:31.309Z info: Fetched 0 products
+2024-10-24T11:55:35.688Z info: Fetched 0 products
+2024-10-24T11:55:35.688Z info: Fetched 0 products
+2024-10-24T11:55:50.055Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:55:50.057Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:55:50.168Z info: Fetched 0 products
+2024-10-24T11:55:50.168Z info: Fetched 0 products
+2024-10-24T12:07:23.093Z info: Fetched 0 products
+2024-10-24T12:07:23.093Z info: Fetched 0 products
+2024-10-24T12:07:27.280Z info: Fetched 0 products
+2024-10-24T12:07:27.280Z info: Fetched 0 products
+2024-10-24T12:07:41.694Z info: User logged in: 8d75d76a-0309-49db-af41-2d2b5f97b27a
+2024-10-24T12:07:41.695Z info: User logged in: 8d75d76a-0309-49db-af41-2d2b5f97b27a
+2024-10-24T12:07:41.822Z info: Fetched 0 products
+2024-10-24T12:07:41.822Z info: Fetched 0 products
+2024-10-24T12:08:37.439Z info: Fetched 0 products
+2024-10-24T12:08:37.439Z info: Fetched 0 products
+2024-10-24T12:08:51.572Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T12:08:51.573Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T12:08:51.738Z info: Fetched 0 products
+2024-10-24T12:08:51.738Z info: Fetched 0 products
+2024-10-24T12:18:41.047Z error: Error creating product: 
+Invalid `prisma.product.create()` invocation in
+/home/nicanorkyamba/Port_1/src/services/productService.js:32:45
+
+  29 const priceFloat = parseFloat(price);
+  30 const availabilityBool = Boolean(availability);
+  31 
+→ 32 const newProduct = await prisma.product.create({
+       data: {
+         name: "Sachi Sweetness Product",
+         price: 1236.99,
+         availability: true,
+         description: "Sachi Sweetness Product Desc",
+         image: "/home/nicanorkyamba/Port_1/uploads/9a499c604350746e86576f0e75f34aa7",
+         retailerId: "265c9327-2d9f-482b-8ac0-5327aaff2fef",
+         category: "Poultry",
+     +   user: {
+     +     create: UserCreateWithoutProductsInput | UserUncheckedCreateWithoutProductsInput,
+     +     connectOrCreate: UserCreateOrConnectWithoutProductsInput,
+     +     connect: UserWhereUniqueInput
+     +   }
+       }
+     })
+
+Argument `user` is missing.
+2024-10-24T12:18:41.047Z error: Error creating product: Error creating product
+2024-10-24T12:29:03.010Z info: Product created: dc7d651d-aaa6-4da6-912b-2e72f0c10dad
+2024-10-24T12:29:03.019Z info: Product created: dc7d651d-aaa6-4da6-912b-2e72f0c10dad
+2024-10-24T12:29:19.061Z info: Fetched 1 products
+2024-10-24T12:29:19.061Z info: Fetched 1 products
+2024-10-24T12:31:10.763Z info: Product updated: dc7d651d-aaa6-4da6-912b-2e72f0c10dad
+2024-10-24T12:31:10.766Z info: Product updated: dc7d651d-aaa6-4da6-912b-2e72f0c10dad
+2024-10-24T12:31:15.219Z info: Fetched 1 products
+2024-10-24T12:31:15.220Z info: Fetched 1 products
+2024-10-24T12:39:41.245Z info: Product permanently deleted: dc7d651d-aaa6-4da6-912b-2e72f0c10dad
+2024-10-24T12:39:41.246Z info: Product permanently deleted: dc7d651d-aaa6-4da6-912b-2e72f0c10dad
+2024-10-24T12:39:47.099Z info: Fetched 0 products
+2024-10-24T12:39:47.100Z info: Fetched 0 products

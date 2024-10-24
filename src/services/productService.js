@@ -36,8 +36,10 @@ async function createProduct(product) {
         availability: availabilityBool,
         description,
         image,
-        retailerId,
-        category
+        category,
+        user: {
+          connect: { id: retailerId }
+        }
       }
     });
     logger.info(`Product created: ${newProduct.id}`);
@@ -143,8 +145,10 @@ async function updateProduct(id, product) {
         availability: availabilityBool,
         description,
         image,
-        retailerId,
-        category
+        category,
+        user: {
+          connect: { id: retailerId }
+        }
       }
     });
     logger.info(`Product updated: ${updatedProduct.id}`);
