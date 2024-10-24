@@ -271,7 +271,7 @@ async function permanentlyDeleteUser(req, res) {
 }
 
 module.exports = {
-  createUser: [upload.none(), createUser],
+  createUser,
   loginUser,
   getUsers,
   getUserById,
