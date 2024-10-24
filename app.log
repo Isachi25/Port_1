@@ -1850,3 +1850,10 @@ Error converting field "farmName" of expected non-nullable type "String", found 
 2024-10-23T21:16:20.037Z info: Fetched 7 products
 2024-10-23T21:16:45.496Z info: Fetched 7 products
 2024-10-23T21:16:45.496Z info: Fetched 7 products
+2024-10-24T11:00:14.841Z info: Fetched 0 products
+2024-10-24T11:00:14.848Z info: Fetched 0 products
+2024-10-24T11:00:55.422Z error: Error creating user: Invalid role
+2024-10-24T11:05:03.265Z info: User created: a9fb6fe5-da2c-42f7-af76-7957922c801b
+2024-10-24T11:05:03.273Z info: User created: a9fb6fe5-da2c-42f7-af76-7957922c801b
+2024-10-24T11:05:06.133Z info: Fetched 0 products
+2024-10-24T11:05:06.134Z info: Fetched 0 products
