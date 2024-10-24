@@ -1889,3 +1889,19 @@ Error converting field "farmName" of expected non-nullable type "String", found 
 2024-10-24T11:35:18.028Z info: Fetched 0 products
 2024-10-24T11:35:36.968Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
 2024-10-24T11:35:36.969Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:41:57.020Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:41:57.026Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:42:02.082Z info: Fetched 0 products
+2024-10-24T11:42:02.083Z info: Fetched 0 products
+2024-10-24T11:42:54.085Z info: Fetched 0 products
+2024-10-24T11:42:54.086Z info: Fetched 0 products
+2024-10-24T11:43:11.501Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:43:11.505Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:44:17.765Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:44:17.767Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:44:51.955Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:44:51.957Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:46:27.729Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:46:27.731Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:46:53.793Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:46:53.795Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef

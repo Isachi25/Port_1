@@ -48,16 +48,15 @@ async function loginUser(req, res) {
       status: 'success',
       data: {
         accessToken: token,
-        data: {
+        user: {
           id: user.id,
           name: user.name,
           email: user.email,
           farmName: user.farmName,
           location: user.location,
-          profileImage: user.profileImage,
           role: user.role
-        },
-      },
+        }
+      }
     });
   } catch (error) {
     logger.error(`Error logging in user: ${error.message}`);
