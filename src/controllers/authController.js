@@ -48,7 +48,7 @@ async function loginUser(req, res) {
       status: 'success',
       data: {
         accessToken: token,
-        user: {
+        data: {
           id: user.id,
           name: user.name,
           email: user.email,
@@ -148,30 +148,6 @@ async function getUserById(req, res) {
 // Function to update user (admin or retailer)
 async function updateUser(req, res) {
   try {
-    const role = req.body.role;
-    let schema;
-    if (role === 'admin') {
-      req.body.profileImage = req.file.path;
-      schema = Joi.object({
-        name: Joi.string().required(),
-        email: Joi.string().email().required(),
-        password: Joi.string().required(),
-        profileImage: Joi.string().required(),
-        role: Joi.string().valid('admin').default('admin')
-      });
-    } else if (role === 'retailer') {
-      schema = Joi.object({
-        name: Joi.string().required(),
-        email: Joi.string().email().required(),
-        password: Joi.string().required(),
-        farmName: Joi.string().required(),
-        location: Joi.string().required(),
-        role: Joi.string().valid('retailer').default('retailer')
-      });
-    } else {
-      throw new Error('Invalid role');
-    }
-
     const { error } = idSchema.validate(req.params.id);
     if (error) {
       return res.status(400).json({
@@ -182,7 +158,8 @@ async function updateUser(req, res) {
       });
     }
 
-    const user = await authService.updateUser(req.params.id, req.body, schema);
+    let user = { ...req.body };
+    user = await authService.updateUser(req.params.id, user);
     logger.info(`User updated: ${user.id}`);
     res.status(200).json({
       statusCode: 200,
@@ -191,22 +168,13 @@ async function updateUser(req, res) {
       data: user
     });
   } catch (error) {
-    if (error.message === 'User not found') {
-      res.status(404).json({
-        statusCode: 404,
-        message: 'User not found',
-        status: 'error',
-        error: error.message
-      });
-    } else {
-      logger.error(`Error updating user: ${error.message}`);
-      res.status(400).json({
-        statusCode: 400,
-        message: 'Bad request',
-        status: 'error',
-        error: error.message
-      });
-    }
+    logger.error(`Error updating user: ${error.message}`);
+    res.status(400).json({
+      statusCode: 400,
+      message: 'Bad request',
+      status: 'error',
+      error: error.message
+    });
   }
 }
 

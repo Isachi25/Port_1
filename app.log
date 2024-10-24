@@ -1881,3 +1881,11 @@ Error converting field "farmName" of expected non-nullable type "String", found 
 2024-10-24T11:29:48.511Z info: Fetched 0 products
 2024-10-24T11:30:05.193Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
 2024-10-24T11:30:05.195Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:31:00.988Z info: Fetched 0 products
+2024-10-24T11:31:00.989Z info: Fetched 0 products
+2024-10-24T11:31:40.131Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:31:40.134Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:35:18.027Z info: Fetched 0 products
+2024-10-24T11:35:18.028Z info: Fetched 0 products
+2024-10-24T11:35:36.968Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T11:35:36.969Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef

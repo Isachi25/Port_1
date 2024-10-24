@@ -151,14 +151,22 @@ async function getUserById(id, role) {
 }
 
 // Function to update user (admin or retailer)
-async function updateUser(id, user, schema) {
+async function updateUser(id, user) {
+  let schema;
+  if (user.role === 'admin') {
+    schema = adminSchema;
+  } else if (user.role === 'retailer') {
+    schema = retailerSchema;
+  } else {
+    throw new Error('Invalid role');
+  }
+
   const { error } = schema.validate(user);
   if (error) {
     throw new Error(`Validation error: ${error.details[0].message}`);
   }
 
   try {
-    // Check if user exists
     const existingUser = await prisma.user.findUnique({
       where: {
         id: id,
@@ -169,23 +177,11 @@ async function updateUser(id, user, schema) {
       throw new Error('User not found');
     }
 
-    if (user.password) {
-      user.password = await hashPassword(user.password);
-    }
-
     const updatedUser = await prisma.user.update({
       where: {
         id: id,
       },
-      data: {
-        name: user.name,
-        email: user.email,
-        password: user.password,
-        farmName: user.farmName,
-        location: user.location,
-        profileImage: user.profileImage,
-        role: user.role
-      },
+      data: user,
     });
     logger.info(`User updated: ${updatedUser.id}`);
     return updatedUser;
