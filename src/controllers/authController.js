@@ -1,6 +1,3 @@
-const multer = require('multer');
-const upload = multer({ dest: 'uploads/' });
-
 const authService = require('../services/authService');
 const logger = require('../utils/logger');
 const { generateToken } = require('../utils/hashPassword');

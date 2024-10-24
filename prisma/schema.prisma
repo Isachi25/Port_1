@@ -30,7 +30,6 @@ model User {
   farmName            String?
   location            String?
   products            Product[]
-  profileImage        String?
   createdAt           DateTime        @default(now())
   updatedAt           DateTime        @updatedAt
   deletedAt           DateTime?
