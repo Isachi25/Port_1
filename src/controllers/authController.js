@@ -2,44 +2,14 @@ const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 
 const authService = require('../services/authService');
-const Joi = require('joi');
 const logger = require('../utils/logger');
 const { generateToken } = require('../utils/hashPassword');
-
-// Validation schemas
-const idSchema = Joi.string().required();
-const paginationSchema = Joi.object({
-  page: Joi.number().integer().min(1).default(1),
-  limit: Joi.number().integer().min(1).default(10),
-});
 
 // Function to create a new user (admin or retailer)
 async function createUser(req, res) {
   console.log(req.body);
   try {
-    const role = req.body.role;
-    let schema;
-    if (role === 'admin') {
-      schema = Joi.object({
-        name: Joi.string().required(),
-        email: Joi.string().email().required(),
-        password: Joi.string().required(),
-        role: Joi.string().valid('admin').default('admin')
-      });
-    } else if (role === 'retailer') {
-      schema = Joi.object({
-        name: Joi.string().required(),
-        email: Joi.string().email().required(),
-        password: Joi.string().required(),
-        farmName: Joi.string().required(),
-        location: Joi.string().required(),
-        role: Joi.string().valid('retailer').default('retailer')
-      });
-    } else {
-      throw new Error('Invalid role');
-    }
-
-    const user = await authService.createUser(req.body, schema);
+    const user = await authService.createUser(req.body);
     logger.info(`User created: ${user.id}`);
     const accessToken = generateToken({ id: user.id });
     res.status(201).json({

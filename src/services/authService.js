@@ -29,7 +29,16 @@ const loginSchema = Joi.object({
 });
 
 // Function to create a new user (admin or retailer)
-async function createUser(user, schema) {
+async function createUser(user) {
+  let schema;
+  if (user.role === 'admin') {
+    schema = adminSchema;
+  } else if (user.role === 'retailer') {
+    schema = retailerSchema;
+  } else {
+    throw new Error('Invalid role');
+  }
+
   const { error } = schema.validate(user);
   if (error) {
     throw new Error(`Validation error: ${error.details[0].message}`);
@@ -42,8 +51,6 @@ async function createUser(user, schema) {
         email: user.email,
       },
     });
-
-    console.log(existingUser);
 
     if (existingUser) {
       throw new Error('User with the same email already exists');
