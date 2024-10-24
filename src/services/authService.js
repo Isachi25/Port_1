@@ -6,11 +6,10 @@ const { hashPassword, verifyPassword } = require('../utils/hashPassword');
 
 // Validation schema for admin
 const adminSchema = Joi.object({
-    name: Joi.string().required(),
-    email: Joi.string().email().required(),
-    password: Joi.string().required(),
-    role: Joi.string().valid('admin').default('admin'),
-    profileImage: Joi.string().required()
+  name: Joi.string().required(),
+  email: Joi.string().email().required(),
+  password: Joi.string().required(),
+  role: Joi.string().valid('admin').default('admin')
 });
 
 // Validation schema for retailer
@@ -49,7 +48,7 @@ async function createUser(user, schema) {
     }
 
     // Extract individual fields
-    const { name, email, password, farmName, location, profileImage, role } = user;
+    const { name, email, password, farmName, location, role } = user;
 
     // Hash the password before saving
     const hashedPassword = await hashPassword(password);
@@ -61,7 +60,6 @@ async function createUser(user, schema) {
         password: hashedPassword,
         farmName,
         location,
-        profileImage,
         role
       },
     });

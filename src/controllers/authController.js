@@ -19,12 +19,10 @@ async function createUser(req, res) {
     const role = req.body.role;
     let schema;
     if (role === 'admin') {
-      req.body.profileImage = req.file.path;
       schema = Joi.object({
         name: Joi.string().required(),
         email: Joi.string().email().required(),
         password: Joi.string().required(),
-        // profileImage: Joi.string().required(),
         role: Joi.string().valid('admin').default('admin')
       });
     } else if (role === 'retailer') {
@@ -302,7 +300,7 @@ async function permanentlyDeleteUser(req, res) {
 }
 
 module.exports = {
-  createUser,
+  createUser: [upload.none(), createUser],
   loginUser,
   getUsers,
   getUserById,
