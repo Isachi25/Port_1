@@ -32,7 +32,7 @@ async function adminMiddleware(req, res, next) {
   try {
     const decoded = jwt.verify(token, JWT_SECRET);
     const userId = decoded.id;
-    const user = await prisma.admin.findUnique({
+    const user = await prisma.user.findUnique({
       where: {
         id: userId
       }

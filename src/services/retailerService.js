@@ -14,6 +14,7 @@ const retailerSchema = Joi.object({
   password: Joi.string().required(),
   farmName: Joi.string().required(),
   location: Joi.string().required(),
+  role: Joi.string().valid('retailer').default('retailer')
 });
 
 // Validation schema for login
@@ -31,7 +32,7 @@ async function createRetailer(retailer) {
 
   try {
     // Check if retailer with the same email already exists
-    const existingRetailer = await prisma.retailer.findUnique({
+    const existingRetailer = await prisma.user.findUnique({
       where: {
         email: retailer.email,
       },
@@ -42,18 +43,19 @@ async function createRetailer(retailer) {
     }
 
     // Extract individual fields
-    const { name, email, password, farmName, location } = retailer;
+    const { name, email, password, farmName, location, role } = retailer;
 
     // Hash the password before saving
     const hashedPassword = await hashPassword(password);
 
-    const newRetailer = await prisma.retailer.create({
+    const newRetailer = await prisma.user.create({
       data: {
         name,
         email,
         password: hashedPassword,
         farmName,
         location,
+        role
       },
     });
     logger.info(`Retailer created: ${newRetailer.id}`);
@@ -72,13 +74,13 @@ async function loginRetailer(email, password) {
   }
 
   try {
-    const retailer = await prisma.retailer.findUnique({
+    const retailer = await prisma.user.findUnique({
       where: {
         email,
       },
     });
 
-    if (!retailer || retailer.deletedAt) {
+    if (!retailer || retailer.deletedAt || retailer.role !== 'retailer') {
       throw new Error('Invalid email or password');
     }
 
@@ -98,7 +100,10 @@ async function loginRetailer(email, password) {
 // Function to get all retailers with pagination
 async function getRetailers(page = 1, limit = 10) {
   try {
-    const retailers = await prisma.retailer.findMany({
+    const retailers = await prisma.user.findMany({
+      where: {
+        role: 'retailer',
+      },
       skip: (page - 1) * limit,
       take: limit,
     });
@@ -113,13 +118,13 @@ async function getRetailers(page = 1, limit = 10) {
 // Function to get retailer by ID
 async function getRetailerById(id) {
   try {
-    const retailer = await prisma.retailer.findUnique({
+    const retailer = await prisma.user.findUnique({
       where: {
         id: id,
       },
     });
 
-    if (!retailer || retailer.deletedAt) {
+    if (!retailer || retailer.deletedAt || retailer.role !== 'retailer') {
       throw new Error('Retailer not found');
     }
 
@@ -140,13 +145,13 @@ async function updateRetailer(id, retailer) {
 
   try {
     // Check if retailer exists
-    const existingRetailer = await prisma.retailer.findUnique({
+    const existingRetailer = await prisma.user.findUnique({
       where: {
         id: id,
       },
     });
 
-    if (!existingRetailer || existingRetailer.deletedAt) {
+    if (!existingRetailer || existingRetailer.deletedAt || existingRetailer.role !== 'retailer') {
       throw new Error('Retailer not found');
     }
 
@@ -154,7 +159,7 @@ async function updateRetailer(id, retailer) {
       retailer.password = await hashPassword(retailer.password);
     }
 
-    const updatedRetailer = await prisma.retailer.update({
+    const updatedRetailer = await prisma.user.update({
       where: {
         id: id,
       },
@@ -164,6 +169,7 @@ async function updateRetailer(id, retailer) {
         password: retailer.password,
         farmName: retailer.farmName,
         location: retailer.location,
+        role: 'retailer'
       },
     });
     logger.info(`Retailer updated: ${updatedRetailer.id}`);
@@ -177,7 +183,7 @@ async function updateRetailer(id, retailer) {
 // Function to delete retailer (soft delete)
 async function deleteRetailer(id) {
   try {
-    const deletedRetailer = await prisma.retailer.update({
+    const deletedRetailer = await prisma.user.update({
       where: {
         id: id,
       },
@@ -196,17 +202,17 @@ async function deleteRetailer(id) {
 // Function to permanently delete retailer
 async function permanentlyDeleteRetailer(id) {
   try {
-    const existingRetailer = await prisma.retailer.findUnique({
+    const existingRetailer = await prisma.user.findUnique({
       where: {
         id: id,
       },
     });
 
-    if (!existingRetailer) {
+    if (!existingRetailer || existingRetailer.role !== 'retailer') {
       throw new Error('Retailer not found');
     }
 
-    const deletedRetailer = await prisma.retailer.delete({
+    const deletedRetailer = await prisma.user.delete({
       where: {
         id: id,
       },

@@ -21,26 +21,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Retailer {
+model User {
   id                  String          @id @default(uuid()) @map("_id")
   name                String
   email               String          @unique
   password            String
-  farmName            String
-  location            String
+  role                String          @default("retailer")
+  farmName            String?
+  location            String?
   products            Product[]
-  createdAt           DateTime        @default(now())
-  updatedAt           DateTime        @updatedAt
-  deletedAt           DateTime?
-}
-
-model Admin {
-  id                  String          @id @default(uuid()) @map("_id")
-  name                String
-  email               String          @unique
-  password            String
-  profileImage        String
-  role                String          @default("admin")
+  profileImage        String?
   createdAt           DateTime        @default(now())
   updatedAt           DateTime        @updatedAt
   deletedAt           DateTime?
@@ -54,8 +44,8 @@ model Product {
   description       String
   image             String
   category          ProductCategory
-  retailerId        String
-  retailer          Retailer          @relation(fields: [retailerId], references: [id])
+  userId            String
+  user              User              @relation(fields: [userId], references: [id])
   orders            Order[]
   createdAt         DateTime          @default(now())
   updatedAt         DateTime          @updatedAt
@@ -70,7 +60,7 @@ model Order {
   email           String
   address         String
   status          OrderStatus         @default(Processing)
-  product         Product              @relation(fields: [productId], references: [id]) // Relates to the product object
+  product         Product             @relation(fields: [productId], references: [id]) // Relates to the product object
   createdAt       DateTime            @default(now())
   updatedAt       DateTime            @updatedAt
   deletedAt       DateTime?

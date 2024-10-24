@@ -6,8 +6,7 @@ const multer = require('multer');
 const path = require('path');
 
 // Import routes
-const adminRoutes = require('./routes/adminRoutes');
-const retailerRoutes = require('./routes/retailerRoutes');
+const authRoutes = require('./routes/authRoutes');
 const productRoutes = require('./routes/productRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 
@@ -30,8 +29,7 @@ app.get('/', (req, res) => {
 });
 
 // Use routes
-app.use('/api/v1/admins', upload.single('profileImage'), adminRoutes);
-app.use('/api/v1/retailers', upload.single('profileImage'), retailerRoutes);
+app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/products', upload.single('image'), productRoutes);
 app.use('/api/v1/orders', orderRoutes);
 

@@ -33,7 +33,7 @@ async function createAdmin(admin) {
     // Hash the password before saving
     const hashedPassword = await hashPassword(password);
 
-    const newAdmin = await prisma.admin.create({
+    const newAdmin = await prisma.user.create({
       data: {
         name,
         email,
@@ -57,13 +57,13 @@ async function loginAdmin(email, password) {
   }
 
   try {
-    const admin = await prisma.admin.findUnique({
+    const admin = await prisma.user.findUnique({
       where: {
         email: email,
       },
     });
 
-    if (!admin || admin.deletedAt) {
+    if (!admin || admin.deletedAt || admin.role !== 'admin') {
       throw new Error('Invalid email or password');
     }
 
@@ -83,7 +83,10 @@ async function loginAdmin(email, password) {
 // Function to get all admins with pagination
 async function getAdmins(page = 1, limit = 10) {
   try {
-    const admins = await prisma.admin.findMany({
+    const admins = await prisma.user.findMany({
+      where: {
+        role: 'admin',
+      },
       skip: (page - 1) * limit,
       take: limit,
     });
@@ -98,13 +101,13 @@ async function getAdmins(page = 1, limit = 10) {
 // Function to get admin by ID
 async function getAdminById(id) {
   try {
-    const admin = await prisma.admin.findUnique({
+    const admin = await prisma.user.findUnique({
       where: {
         id: id,
       },
     });
 
-    if (!admin || admin.deletedAt) {
+    if (!admin || admin.deletedAt || admin.role !== 'admin') {
       throw new Error('Admin not found');
     }
 
@@ -125,20 +128,20 @@ async function updateAdmin(id, admin) {
 
   try {
     // Check if admin exists
-    const existingAdmin = await prisma.admin.findUnique({
+    const existingAdmin = await prisma.user.findUnique({
       where: {
         id: id,
       },
     });
 
-    if (!existingAdmin || existingAdmin.deletedAt) {
+    if (!existingAdmin || existingAdmin.deletedAt || existingAdmin.role !== 'admin') {
       throw new Error('Admin not found');
     }
 
     // Extract individual fields
     const { name, email, password, profileImage, role } = admin;
 
-    const updatedAdmin = await prisma.admin.update({
+    const updatedAdmin = await prisma.user.update({
       where: {
         id: id,
       },
@@ -161,7 +164,7 @@ async function updateAdmin(id, admin) {
 // Function to delete admin (soft delete)
 async function deleteAdmin(id) {
   try {
-    const deletedAdmin = await prisma.admin.update({
+    const deletedAdmin = await prisma.user.update({
       where: {
         id: id,
       },
@@ -180,17 +183,17 @@ async function deleteAdmin(id) {
 // Function to permanently delete admin
 async function permanentlyDeleteAdmin(id) {
   try {
-    const existingAdmin = await prisma.admin.findUnique({
+    const existingAdmin = await prisma.user.findUnique({
       where: {
         id: id,
       },
     });
 
-    if (!existingAdmin) {
+    if (!existingAdmin || existingAdmin.role !== 'admin') {
       throw new Error('Admin not found');
     }
 
-    const deletedAdmin = await prisma.admin.delete({
+    const deletedAdmin = await prisma.user.delete({
       where: {
         id: id,
       },
