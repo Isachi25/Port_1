@@ -9,19 +9,19 @@ const paginationSchema = Joi.object({
   limit: Joi.number().integer().min(1).default(10)
 });
 
-// Function to create a new order
-async function createOrder(req, res) {
+// Function to create new orders
+async function createOrders(req, res) {
   try {
-    const order = await orderService.createOrder(req.body);
-    logger.info(`Order created: ${order.id}`);
+    const orders = await orderService.createOrders(req.body);
+    logger.info(`Orders created: ${orders.map(order => order.id).join(', ')}`);
     res.status(201).json({
       statusCode: 201,
-      message: 'Order created successfully',
+      message: 'Orders created successfully',
       status: 'success',
-      data: order
+      data: orders
     });
   } catch (error) {
-    logger.error(`Error creating order: ${error.message}`);
+    logger.error(`Error creating orders: ${error.message}`);
     res.status(400).json({
       statusCode: 400,
       message: 'Bad request',
@@ -235,7 +235,7 @@ async function permanentlyDeleteOrder (req, res) {
 }
 
 module.exports = {
-  createOrder,
+  createOrders,
   getOrders,
   getOrderById,
   updateOrder,

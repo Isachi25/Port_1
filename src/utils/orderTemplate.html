@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333333;
+        }
+        p {
+            color: #666666;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order Confirmation</h1>
+        <p>Dear {{clientName}},</p>
+        <p>Your order has been received. Here are the details:</p>
+        <ul>
+            {{#each orders}}
+            <li>
+                <strong>Product ID:</strong> {{productId}}<br>
+                <strong>Product Name:</strong> {{productName}}<br>
+                <strong>Product Description:</strong> {{productDescription}}<br>
+                <strong>Quantity:</strong> {{quantity}}<br>
+                <strong>Price:</strong> ${{price}}
+            </li>
+            {{/each}}
+        </ul>
+        <p><strong>Address:</strong> {{address}}</p>
+        <p><strong>Status:</strong> {{status}}</p>
+        <p>Thank you for shopping with us!</p>
+        <p>Best regards,<br>Retailer</p>
+        <div class="footer">
+            <p>&copy; 2024 Retailer. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

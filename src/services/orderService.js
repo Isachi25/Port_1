@@ -2,69 +2,61 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const Joi = require('joi');
 const logger = require('../utils/logger');
-const nodemailer = require('nodemailer');
+const { sendEmail, generateOrderConfirmationEmail } = require('./emailService');
 
-// Validation schema
-const orderSchema = Joi.object({
+// Validation schema for a single order
+const singleOrderSchema = Joi.object({
   productId: Joi.string().required(),
   clientName: Joi.string().required(),
   phoneNumber: Joi.string().required(),
   email: Joi.string().email().required(),
   address: Joi.string().required(),
-  status: Joi.string().valid('Processing', 'Delivered', 'Cancelled').default('Processing')
+  status: Joi.string().valid('Processing', 'Delivered', 'Cancelled').default('Processing'),
+  quantity: Joi.number().integer().min(1).required()
 });
 
-// Email transporter setup
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
-  }
-});
+// Validation schema for multiple orders
+const multipleOrdersSchema = Joi.array().items(singleOrderSchema).min(1);
 
-// Function to send email
-async function sendOrderConfirmationEmail(order) {
-  const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: order.email,
-    subject: 'Order Confirmation',
-    text: `Dear ${order.clientName},\n\nYour order has been received. Here are the details:\n\nProduct ID: ${order.productId}\nAddress: ${order.address}\nStatus: ${order.status}\n\nThank you for shopping with us!\n\nBest regards,\nRetailer`
-  };
-
-  try {
-    await transporter.sendMail(mailOptions);
-    logger.info(`Order confirmation email sent to: ${order.email}`);
-  } catch (err) {
-    logger.error(`Error sending email: ${err.message}`);
-  }
-}
-
-// Function to create a new order
-async function createOrder(order) {
-  const { error } = orderSchema.validate(order);
+// Function to create new orders
+async function createOrders(orders) {
+  const { error } = multipleOrdersSchema.validate(orders);
   if (error) {
     throw new Error(`Validation error: ${error.details[0].message}`);
   }
 
   try {
-    const newOrder = await prisma.order.create({
-      data: {
-        ...order,
-        product: {
-          connect: { id: order.productId }
+    const createdOrders = [];
+
+    for (const order of orders) {
+      const newOrder = await prisma.order.create({
+        data: {
+          clientName: order.clientName,
+          phoneNumber: order.phoneNumber,
+          email: order.email,
+          address: order.address,
+          status: order.status,
+          quantity: order.quantity,
+          product: {
+            connect: { id: order.productId }
+          }
+        },
+        include: {
+          product: true
         }
-      }
-    });
-    logger.info(`Order created: ${newOrder.id}`);
+      });
+      logger.info(`Order created: ${newOrder.id}`);
+      createdOrders.push(newOrder);
+    }
 
-    // Send order confirmation email
-    await sendOrderConfirmationEmail(newOrder);
+    // Generate email template and send order confirmation email
+    const mailOptions = generateOrderConfirmationEmail(createdOrders);
+    await sendEmail(mailOptions);
 
-    return newOrder;
+    return createdOrders;
   } catch (err) {
-    logger.error(`Error creating order: ${err.message}`);
-    throw new Error('Error creating order');
+    logger.error(`Error creating orders: ${err.message}`);
+    throw new Error('Error creating orders');
   }
 }
 
@@ -213,7 +205,7 @@ async function permanentlyDeleteOrder (id) {
 }
 
 module.exports = {
-  createOrder,
+  createOrders,
   getOrders,
   getOrderById,
   updateOrder,

@@ -1985,3 +1985,105 @@ Argument `user` is missing.
 2024-10-24T12:39:41.246Z info: Product permanently deleted: dc7d651d-aaa6-4da6-912b-2e72f0c10dad
 2024-10-24T12:39:47.099Z info: Fetched 0 products
 2024-10-24T12:39:47.100Z info: Fetched 0 products
+2024-10-24T12:55:22.973Z info: Fetched 0 products
+2024-10-24T12:55:22.982Z info: Fetched 0 products
+2024-10-24T12:55:36.220Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T12:55:36.225Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T12:55:36.369Z info: Fetched 0 products
+2024-10-24T12:55:36.369Z info: Fetched 0 products
+2024-10-24T12:56:27.532Z info: Fetched 0 products
+2024-10-24T12:56:27.545Z info: Fetched 0 products
+2024-10-24T12:56:43.790Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T12:56:43.795Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-24T12:56:43.957Z info: Fetched 0 products
+2024-10-24T12:56:43.957Z info: Fetched 0 products
+2024-10-24T12:56:51.230Z info: Fetched 0 products
+2024-10-24T12:56:51.231Z info: Fetched 0 products
+2024-10-26T13:10:37.975Z error: Error creating order: 
+Invalid `prisma.order.create()` invocation in
+/home/nicanorkyamba/Port_1/src/services/orderService.js:52:41
+
+  49 }
+  50 
+  51 try {
+→ 52   const newOrder = await prisma.order.create({
+         data: {
+           productId: "8d75d76a-0309-49db-af41-2d2b5f97b27a",
+           ~~~~~~~~~
+           clientName: "John Doe",
+           phoneNumber: "1234567890",
+           email: "johndoe@example.com",
+           address: "123 Main St, Anytown, USA",
+           status: "Processing",
+           product: {
+             connect: {
+               id: "8d75d76a-0309-49db-af41-2d2b5f97b27a"
+             }
+           },
+       ?   id?: String,
+       ?   createdAt?: DateTime,
+       ?   updatedAt?: DateTime,
+       ?   deletedAt?: DateTime | Null
+         }
+       })
+
+Unknown argument `productId`. Did you mean `product`? Available options are marked with ?.
+2024-10-26T13:10:37.978Z error: Error creating order: Error creating order
+2024-10-26T13:12:43.807Z error: Error creating order: 
+Invalid `prisma.order.create()` invocation in
+/home/nicanorkyamba/Port_1/src/services/orderService.js:52:41
+
+  49 }
+  50 
+  51 try {
+→ 52   const newOrder = await prisma.order.create(
+An operation failed because it depends on one or more records that were required but not found. No 'Product' record(s) (needed to inline the relation on 'Order' record(s)) was found for a nested connect on one-to-many relation 'OrderToProduct'.
+2024-10-26T13:12:43.810Z error: Error creating order: Error creating order
+2024-10-26T13:14:42.566Z info: Order created: 1d93c8d6-2ffd-4fbb-82b2-2668b6ca93d3
+2024-10-26T13:14:43.858Z error: Error sending email: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-38058bb4287sm4277985f8f.114 - gsmtp
+2024-10-26T13:14:43.859Z error: Error creating order: Error sending email
+2024-10-26T13:14:43.860Z error: Error creating order: Error creating order
+2024-10-26T13:17:37.421Z info: Order created: 9fdfc9fa-7b6e-4e62-b22b-4e8944f9fb41
+2024-10-26T13:17:38.411Z error: Error sending email: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-4318b567e23sm77137405e9.25 - gsmtp
+2024-10-26T13:17:38.415Z error: Error creating order: Error sending email
+2024-10-26T13:17:38.416Z error: Error creating order: Error creating order
+2024-10-26T13:18:24.915Z info: Order created: 3cc4e4d3-17d2-4826-99ba-43f38b6edba0
+2024-10-26T13:18:26.034Z error: Error sending email: Invalid login: 534-5.7.9 Application-specific password required. For more information, go to
+534 5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor 5b1f17b1804b1-4318b5430b6sm77536385e9.3 - gsmtp
+2024-10-26T13:18:26.036Z error: Error creating order: Error sending email
+2024-10-26T13:18:26.037Z error: Error creating order: Error creating order
+2024-10-26T13:19:29.925Z info: Order created: 788d82b3-9cf7-4eb4-bf97-a2ab85cc79e8
+2024-10-26T13:19:30.996Z error: Error sending email: Invalid login: 534-5.7.9 Application-specific password required. For more information, go to
+534 5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor ffacd0b85a97d-38058b70bcdsm4347518f8f.82 - gsmtp
+2024-10-26T13:19:30.997Z error: Error creating order: Error sending email
+2024-10-26T13:19:30.998Z error: Error creating order: Error creating order
+2024-10-26T13:54:47.172Z info: Order created: f2e061a4-3685-4acc-bba3-9cbdf2e1689c
+2024-10-26T13:54:50.973Z info: Order confirmation email sent to: sharonachiengmasiga@gmail.com
+2024-10-26T13:54:50.974Z info: Order created: f2e061a4-3685-4acc-bba3-9cbdf2e1689c
+2024-10-26T14:04:37.803Z info: Order created: 90fcaee1-4021-4e52-82ea-acc5fb83e0c5
+2024-10-26T14:04:37.814Z error: Error creating order: ENOENT: no such file or directory, open '/home/nicanorkyamba/Port_1/src/services/orderTemplate.html'
+2024-10-26T14:04:37.815Z error: Error creating order: Error creating order
+2024-10-26T14:06:41.713Z info: Order created: bb1e7057-1131-472d-aca4-3c1245b2835c
+2024-10-26T14:06:45.087Z info: Email sent to: sharonachiengmasiga@gmail.com
+2024-10-26T14:06:45.088Z info: Order created: bb1e7057-1131-472d-aca4-3c1245b2835c
+2024-10-26T14:15:44.495Z info: Order created: fc532931-5ac0-47ba-af7c-e5d271af21c3
+2024-10-26T14:15:44.899Z error: Error creating order: ENOENT: no such file or directory, open '/home/nicanorkyamba/Port_1/src/utils/orderTemplate.html'
+2024-10-26T14:15:44.899Z error: Error creating order: Error creating order
+2024-10-26T14:16:36.593Z info: Order created: 04867dab-29f4-48b4-a303-b982ed775a4d
+2024-10-26T14:16:39.620Z info: Email sent to: sharonachiengmasiga@gmail.com
+2024-10-26T14:16:39.621Z info: Order created: 04867dab-29f4-48b4-a303-b982ed775a4d
+2024-10-26T14:28:07.722Z info: Order created: e0285c5b-6550-4957-8616-7648041a01a0
+2024-10-26T14:28:10.829Z info: Email sent to: sharonachiengmasiga@gmail.com
+2024-10-26T14:28:12.282Z info: Order created: 6a81f357-6608-4b24-8af3-a203519466aa
+2024-10-26T14:28:17.038Z info: Email sent to: janedoe@example.com
+2024-10-26T14:28:17.039Z info: Orders created: e0285c5b-6550-4957-8616-7648041a01a0, 6a81f357-6608-4b24-8af3-a203519466aa
+2024-10-26T14:52:38.594Z info: Order created: a2bafcc2-b89f-4c39-9b9c-9327400628ae
+2024-10-26T14:52:40.307Z info: Order created: 49ac4566-c562-4696-85af-f9011daca52c
+2024-10-26T14:52:43.114Z info: Email sent to: sharonachiengmasiga@gmail.com
+2024-10-26T14:52:43.116Z info: Orders created: a2bafcc2-b89f-4c39-9b9c-9327400628ae, 49ac4566-c562-4696-85af-f9011daca52c
+2024-10-26T15:04:57.443Z info: Order created: fe255c88-6d7a-4556-9cfc-aed614c5d510
+2024-10-26T15:04:59.068Z info: Order created: 6e2cfffc-6933-491e-8621-0ff5d34af89b
+2024-10-26T15:05:01.510Z info: Email sent to: sharonachiengmasiga@gmail.com
+2024-10-26T15:05:01.512Z info: Orders created: fe255c88-6d7a-4556-9cfc-aed614c5d510, 6e2cfffc-6933-491e-8621-0ff5d34af89b
