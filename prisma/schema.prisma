@@ -60,6 +60,7 @@ model Order {
   address         String
   status          OrderStatus         @default(Processing)
   quantity        Int
+  totalPrice      Float
   product         Product             @relation(fields: [productId], references: [id]) // Relates to the product object
   createdAt       DateTime            @default(now())
   updatedAt       DateTime            @updatedAt

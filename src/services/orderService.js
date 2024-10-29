@@ -29,6 +29,16 @@ async function createOrders(orders) {
     const createdOrders = [];
 
     for (const order of orders) {
+      const product = await prisma.product.findUnique({
+        where: { id: order.productId }
+      });
+
+      if (!product) {
+        throw new Error(`Product with ID ${order.productId} not found`);
+      }
+
+      const totalPrice = product.price * order.quantity;
+
       const newOrder = await prisma.order.create({
         data: {
           clientName: order.clientName,
@@ -37,6 +47,7 @@ async function createOrders(orders) {
           address: order.address,
           status: order.status,
           quantity: order.quantity,
+          totalPrice: totalPrice,
           product: {
             connect: { id: order.productId }
           }

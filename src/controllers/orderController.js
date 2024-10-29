@@ -13,6 +13,7 @@ const paginationSchema = Joi.object({
 async function createOrders(req, res) {
   try {
     const orders = await orderService.createOrders(req.body);
+    console.log(orders);
     logger.info(`Orders created: ${orders.map(order => order.id).join(', ')}`);
     res.status(201).json({
       statusCode: 201,

@@ -2151,3 +2151,134 @@ An operation failed because it depends on one or more records that were required
 2024-10-29T11:59:50.306Z error: Error creating orders: Validation error: "[0].productId" is not allowed to be empty
 2024-10-29T11:59:55.147Z info: Fetched 5 products
 2024-10-29T11:59:55.148Z info: Fetched 5 products
+2024-10-29T12:27:46.987Z info: Fetched 5 products
+2024-10-29T12:27:46.998Z info: Fetched 5 products
+2024-10-29T12:28:49.680Z info: Order created: 34600c6a-52b7-4fdd-bbd6-2689d12a66ac
+2024-10-29T12:28:52.149Z info: Email sent to: sharonachiengmasiga@gmail.com
+2024-10-29T12:28:52.149Z info: Orders created: 34600c6a-52b7-4fdd-bbd6-2689d12a66ac
+2024-10-29T12:29:45.448Z info: Order created: a56bac6e-949c-4112-a6b6-4ef8395b83b9
+2024-10-29T12:29:47.422Z info: Email sent to: sharonachiengmasiga@gmail.com
+2024-10-29T12:29:47.423Z info: Orders created: a56bac6e-949c-4112-a6b6-4ef8395b83b9
+2024-10-29T12:29:58.560Z info: Fetched 5 products
+2024-10-29T12:29:58.560Z info: Fetched 5 products
+2024-10-29T12:30:01.280Z info: Fetched 5 products
+2024-10-29T12:30:01.281Z info: Fetched 5 products
+2024-10-29T12:31:02.709Z info: Fetched 5 products
+2024-10-29T12:31:02.710Z info: Fetched 5 products
+2024-10-29T12:31:08.081Z info: Fetched 5 products
+2024-10-29T12:31:08.081Z info: Fetched 5 products
+2024-10-29T12:31:48.310Z info: Order created: a46e1057-5053-458a-a433-d32a10c95619
+2024-10-29T12:31:49.812Z info: Order created: b0a7b9e5-e042-4d88-868c-ceffa7c3ec40
+2024-10-29T12:31:51.650Z info: Email sent to: nicanorkyamba98@gmail.com
+2024-10-29T12:31:51.650Z info: Orders created: a46e1057-5053-458a-a433-d32a10c95619, b0a7b9e5-e042-4d88-868c-ceffa7c3ec40
+2024-10-29T12:32:55.434Z info: Order created: 9c91798e-9d78-41da-bfa5-1f9d2b97ff93
+2024-10-29T12:32:56.952Z info: Order created: 5ab31adb-dee3-4e8f-8e20-7d3569ad0dc5
+2024-10-29T12:32:58.834Z info: Email sent to: nicanorkyamba98@gmail.com
+2024-10-29T12:32:58.835Z info: Orders created: 9c91798e-9d78-41da-bfa5-1f9d2b97ff93, 5ab31adb-dee3-4e8f-8e20-7d3569ad0dc5
+2024-10-29T12:36:31.131Z error: Error creating orders: Validation error: "value" must contain at least 1 items
+2024-10-29T12:37:09.587Z info: Order created: f40d0cde-3812-453e-a75a-d1ce103572fe
+2024-10-29T12:37:11.091Z info: Order created: 1d9ec5e7-5256-4231-a0e3-7982b13d2d99
+2024-10-29T12:37:13.529Z info: Email sent to: nicanorkyamba98@gmail.com
+2024-10-29T12:37:13.529Z info: Orders created: f40d0cde-3812-453e-a75a-d1ce103572fe, 1d9ec5e7-5256-4231-a0e3-7982b13d2d99
+2024-10-29T12:42:15.561Z info: Order created: f39ae773-b363-4f2b-a90e-5f634f3f2119
+2024-10-29T12:42:17.076Z info: Order created: 75bd4782-ef6a-43e0-9f35-1650bd620cc3
+2024-10-29T12:42:19.110Z info: Email sent to: nicanorkyamba98@gmail.com
+2024-10-29T12:42:19.111Z info: Orders created: f39ae773-b363-4f2b-a90e-5f634f3f2119, 75bd4782-ef6a-43e0-9f35-1650bd620cc3
+2024-10-29T12:45:31.822Z info: Order created: 25c1a6b2-f2b1-4514-97da-af6c79711b61
+2024-10-29T12:45:33.355Z info: Order created: a180bddd-a86d-409c-8b67-ee810e68b60b
+2024-10-29T12:45:35.471Z info: Email sent to: nicanorkyamba98@gmail.com
+2024-10-29T12:45:35.471Z info: Orders created: 25c1a6b2-f2b1-4514-97da-af6c79711b61, a180bddd-a86d-409c-8b67-ee810e68b60b
+2024-10-29T12:53:37.590Z error: Error creating orders: 
+Invalid `prisma.order.create()` invocation in
+/home/nicanorkyamba/Port_1/src/services/orderService.js:42:43
+
+  39 
+  40 const totalPrice = product.price * order.quantity;
+  41 
+→ 42 const newOrder = await prisma.order.create({
+       data: {
+         clientName: "Sachi Sweetness Product",
+         phoneNumber: "0798749254",
+         email: "nicanorkyamba98@gmail.com",
+         address: "In Her",
+         status: "Processing",
+         quantity: 5,
+         totalPrice: 995,
+         ~~~~~~~~~~
+         product: {
+           connect: {
+             id: "37e0ee9b-88cc-4591-a56f-66ca36782f66"
+           }
+         },
+     ?   id?: String,
+     ?   createdAt?: DateTime,
+     ?   updatedAt?: DateTime,
+     ?   deletedAt?: DateTime | Null
+       },
+       include: {
+         product: true
+       }
+     })
+
+Unknown argument `totalPrice`. Available options are marked with ?.
+2024-10-29T12:53:37.597Z error: Error creating orders: Error creating orders
+2024-10-29T12:55:28.880Z error: Error creating orders: 
+Invalid `prisma.order.create()` invocation in
+/home/nicanorkyamba/Port_1/src/services/orderService.js:42:43
+
+  39 
+  40 const totalPrice = product.price * order.quantity;
+  41 
+→ 42 const newOrder = await prisma.order.create({
+       data: {
+         clientName: "Sachi Sweetness Product",
+         phoneNumber: "0798749254",
+         email: "nicanorkyamba98@gmail.com",
+         address: "In Her",
+         status: "Processing",
+         quantity: 5,
+         totalPrice: 995,
+         ~~~~~~~~~~
+         product: {
+           connect: {
+             id: "37e0ee9b-88cc-4591-a56f-66ca36782f66"
+           }
+         },
+     ?   id?: String,
+     ?   createdAt?: DateTime,
+     ?   updatedAt?: DateTime,
+     ?   deletedAt?: DateTime | Null
+       },
+       include: {
+         product: true
+       }
+     })
+
+Unknown argument `totalPrice`. Available options are marked with ?.
+2024-10-29T12:55:28.881Z error: Error creating orders: Error creating orders
+2024-10-29T12:55:57.505Z info: Order created: 8d8e35a7-7718-4ee1-8944-56c97120f422
+2024-10-29T12:55:59.330Z info: Order created: 054542ea-7a66-445e-b082-aeae24875e94
+2024-10-29T12:56:01.572Z info: Email sent to: nicanorkyamba98@gmail.com
+2024-10-29T12:56:01.572Z info: Orders created: 8d8e35a7-7718-4ee1-8944-56c97120f422, 054542ea-7a66-445e-b082-aeae24875e94
+2024-10-29T12:56:58.740Z info: Order created: a3d43e2a-8ee9-4021-b8d4-136b92765b7a
+2024-10-29T12:57:00.983Z info: Email sent to: nicanorkyamba98@gmail.com
+2024-10-29T12:57:00.984Z info: Orders created: a3d43e2a-8ee9-4021-b8d4-136b92765b7a
+2024-10-29T12:59:39.022Z info: Order created: 7efc15a2-c078-4d37-b9a7-22e3c586c59c
+2024-10-29T12:59:42.314Z info: Email sent to: nicanorkyamba98@gmail.com
+2024-10-29T12:59:42.315Z info: Orders created: 7efc15a2-c078-4d37-b9a7-22e3c586c59c
+2024-10-29T13:08:36.940Z info: Order created: 7d952c57-2600-41b7-a6a2-cde293061d67
+2024-10-29T13:08:38.911Z info: Email sent to: nicanorkyamba98@gmail.com
+2024-10-29T13:08:38.911Z info: Orders created: 7d952c57-2600-41b7-a6a2-cde293061d67
+2024-10-29T13:11:07.105Z info: Order created: b87ac156-c60f-4517-964f-1ef9485c4f9f
+2024-10-29T13:11:09.356Z info: Email sent to: nicanorkyamba98@gmail.com
+2024-10-29T13:11:09.360Z info: Orders created: b87ac156-c60f-4517-964f-1ef9485c4f9f
+2024-10-29T13:13:55.814Z info: Order created: dc0fd7ee-992f-4f7b-8afa-5e91dba04786
+2024-10-29T13:13:57.643Z info: Order created: 6be0c72e-2b22-4328-a642-7ec4f315afa7
+2024-10-29T13:13:59.600Z info: Email sent to: nicanorkyamba98@gmail.com
+2024-10-29T13:13:59.602Z info: Orders created: dc0fd7ee-992f-4f7b-8afa-5e91dba04786, 6be0c72e-2b22-4328-a642-7ec4f315afa7
+2024-10-29T13:17:37.874Z info: Order created: 1d9cf88e-62a6-4f44-ac5d-bb365ccc4ae7
+2024-10-29T13:17:39.705Z info: Order created: 41eebee7-e0c8-4601-8804-fe121f8160e0
+2024-10-29T13:17:41.798Z info: Email sent to: nicanorkyamba98@gmail.com
+2024-10-29T13:17:41.801Z info: Orders created: 1d9cf88e-62a6-4f44-ac5d-bb365ccc4ae7, 41eebee7-e0c8-4601-8804-fe121f8160e0
+2024-10-29T13:18:53.283Z info: Fetched 5 products
+2024-10-29T13:18:53.283Z info: Fetched 5 products

@@ -6,7 +6,7 @@
     <title>Order Confirmation</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
@@ -21,9 +21,11 @@
         }
         h1 {
             color: #333333;
+            text-align: center;
         }
         p {
             color: #666666;
+            line-height: 1.6;
         }
         ul {
             list-style-type: none;
@@ -32,7 +34,7 @@
         li {
             background-color: #f9f9f9;
             margin: 10px 0;
-            padding: 10px;
+            padding: 15px;
             border-radius: 4px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
@@ -41,13 +43,20 @@
             text-align: center;
             color: #999999;
         }
+        .order-details {
+            margin-top: 20px;
+        }
+        .order-details strong {
+            display: inline-block;
+            width: 150px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Order Confirmation</h1>
         <p>Dear {{clientName}},</p>
-        <p>Your order has been received. Here are the details:</p>
+        <p>Thank you for your order! We are pleased to confirm your purchase. Below are the details of your order:</p>
         <ul>
             {{#each orders}}
             <li>
@@ -55,16 +64,19 @@
                 <strong>Product Name:</strong> {{productName}}<br>
                 <strong>Product Description:</strong> {{productDescription}}<br>
                 <strong>Quantity:</strong> {{quantity}}<br>
-                <strong>Price:</strong> ${{price}}
+                <strong>Price:</strong> ${{price}}<br>
+                <strong>Total Price:</strong> ${{totalPrice}}
             </li>
             {{/each}}
         </ul>
-        <p><strong>Address:</strong> {{address}}</p>
-        <p><strong>Status:</strong> {{status}}</p>
-        <p>Thank you for shopping with us!</p>
-        <p>Best regards,<br>Retailer</p>
+        <div class="order-details">
+            <p><strong>Shipping Address:</strong> {{address}}</p>
+            <p><strong>Order Status:</strong> {{status}}</p>
+        </div>
+        <p>We appreciate your business and hope you enjoy your purchase!</p>
+        <p>Best regards,<br>Retailer Team</p>
         <div class="footer">
-            <p>&copy; 2024 Retailer. All rights reserved.</p>
+            <p>&copy; {{year}} MySoko. All rights reserved.</p>
         </div>
     </div>
 </body>

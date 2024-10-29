@@ -27,6 +27,7 @@ async function sendEmail(mailOptions) {
 
 // Function to generate order confirmation email template
 function generateOrderConfirmationEmail(orders) {
+  console.log('Generating order confirmation email, ', orders);
   const templatePath = path.join(__dirname, '../utils/orderTemplate.html');
   const htmlTemplate = fs.readFileSync(templatePath, 'utf8');
   const template = handlebars.compile(htmlTemplate);
@@ -40,7 +41,8 @@ function generateOrderConfirmationEmail(orders) {
       productName: order.product.name,
       productDescription: order.product.description,
       quantity: order.quantity,
-      price: order.product.price
+      price: order.product.price,
+      totalPrice: order.totalPrice
     }))
   };
 
