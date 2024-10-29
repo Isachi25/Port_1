@@ -27,7 +27,6 @@ async function sendEmail(mailOptions) {
 
 // Function to generate order confirmation email template
 function generateOrderConfirmationEmail(orders) {
-  console.log('Generating order confirmation email, ', orders);
   const templatePath = path.join(__dirname, '../utils/orderTemplate.html');
   const htmlTemplate = fs.readFileSync(templatePath, 'utf8');
   const template = handlebars.compile(htmlTemplate);
