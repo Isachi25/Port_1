@@ -2087,3 +2087,67 @@ An operation failed because it depends on one or more records that were required
 2024-10-26T15:04:59.068Z info: Order created: 6e2cfffc-6933-491e-8621-0ff5d34af89b
 2024-10-26T15:05:01.510Z info: Email sent to: sharonachiengmasiga@gmail.com
 2024-10-26T15:05:01.512Z info: Orders created: fe255c88-6d7a-4556-9cfc-aed614c5d510, 6e2cfffc-6933-491e-8621-0ff5d34af89b
+2024-10-28T06:57:56.244Z info: Fetched 5 products
+2024-10-28T06:57:56.251Z info: Fetched 5 products
+2024-10-28T06:58:15.715Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-28T06:58:15.720Z info: User logged in: 265c9327-2d9f-482b-8ac0-5327aaff2fef
+2024-10-28T06:58:16.126Z info: Fetched 5 products
+2024-10-28T06:58:16.126Z info: Fetched 5 products
+2024-10-28T06:58:41.551Z info: Fetched 5 products
+2024-10-28T06:58:41.553Z info: Fetched 5 products
+2024-10-28T07:14:43.234Z info: Fetched 5 products
+2024-10-28T07:14:43.235Z info: Fetched 5 products
+2024-10-28T07:15:01.332Z error: Error logging in user: Invalid email or password
+2024-10-28T07:15:01.334Z error: Error logging in user: Error logging in user
+2024-10-28T07:15:41.623Z error: Error logging in user: Invalid email or password
+2024-10-28T07:15:41.624Z error: Error logging in user: Error logging in user
+2024-10-28T07:30:11.545Z info: User created: eedd24fb-b61a-4f6e-bf34-a145f4689cd8
+2024-10-28T07:30:11.546Z info: User created: eedd24fb-b61a-4f6e-bf34-a145f4689cd8
+2024-10-28T07:30:15.950Z info: Fetched 5 products
+2024-10-28T07:30:15.950Z info: Fetched 5 products
+2024-10-28T07:31:34.284Z info: Fetched 5 products
+2024-10-28T07:31:34.285Z info: Fetched 5 products
+2024-10-28T10:09:35.245Z info: Fetched 5 products
+2024-10-28T10:09:35.246Z info: Fetched 5 products
+2024-10-28T10:09:56.455Z info: Fetched 5 products
+2024-10-28T10:09:56.456Z info: Fetched 5 products
+2024-10-28T12:33:28.321Z info: Fetched 5 products
+2024-10-28T12:33:28.328Z info: Fetched 5 products
+2024-10-28T12:33:30.531Z info: Fetched 5 products
+2024-10-28T12:33:30.533Z info: Fetched 5 products
+2024-10-28T15:01:45.077Z info: Fetched 5 products
+2024-10-28T15:01:45.078Z info: Fetched 5 products
+2024-10-28T19:23:13.180Z info: Fetched 5 products
+2024-10-28T19:23:13.182Z info: Fetched 5 products
+2024-10-28T19:23:13.186Z info: Fetched 5 products
+2024-10-28T19:23:13.187Z info: Fetched 5 products
+2024-10-29T05:30:48.729Z info: Fetched 5 products
+2024-10-29T05:30:48.736Z info: Fetched 5 products
+2024-10-29T05:34:58.758Z info: Fetched 5 products
+2024-10-29T05:34:58.760Z info: Fetched 5 products
+2024-10-29T05:40:41.645Z info: Fetched 5 products
+2024-10-29T05:40:41.646Z info: Fetched 5 products
+2024-10-29T05:40:55.928Z info: Fetched 5 products
+2024-10-29T05:40:55.929Z info: Fetched 5 products
+2024-10-29T05:41:29.675Z info: Fetched 5 products
+2024-10-29T05:41:29.676Z info: Fetched 5 products
+2024-10-29T05:41:47.536Z info: Fetched 5 products
+2024-10-29T05:41:47.538Z info: Fetched 5 products
+2024-10-29T10:45:34.632Z error: Error creating orders: Validation error: "value" must be an array
+2024-10-29T10:50:05.937Z error: Error creating orders: Validation error: "value" must be an array
+2024-10-29T10:50:10.649Z error: Error creating orders: Validation error: "value" must be an array
+2024-10-29T10:50:31.335Z error: Error creating orders: Validation error: "value" must be an array
+2024-10-29T10:56:26.088Z error: Error creating orders: Validation error: "value" must be an array
+2024-10-29T10:57:02.803Z error: Error creating orders: Validation error: "value" must be an array
+2024-10-29T11:01:19.690Z error: Error creating orders: Validation error: "value" must be an array
+2024-10-29T11:01:44.268Z error: Error creating orders: Validation error: "value" must be an array
+2024-10-29T11:04:19.770Z error: Error creating orders: Validation error: "value" must be an array
+2024-10-29T11:36:50.090Z info: Fetched 5 products
+2024-10-29T11:36:50.092Z info: Fetched 5 products
+2024-10-29T11:36:50.805Z info: Fetched 5 products
+2024-10-29T11:36:50.806Z info: Fetched 5 products
+2024-10-29T11:36:51.066Z info: Fetched 5 products
+2024-10-29T11:36:51.067Z info: Fetched 5 products
+2024-10-29T11:59:50.306Z error: Error creating orders: Validation error: "[0].productId" is not allowed to be empty
+2024-10-29T11:59:55.147Z info: Fetched 5 products
+2024-10-29T11:59:55.148Z info: Fetched 5 products
